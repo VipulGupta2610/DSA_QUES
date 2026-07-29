@@ -3,7 +3,8 @@ package pkg;
 public class SingleNumber {
     public static void main(String[] args) {
         int [] nums = {4,1,2,1,2};
-        finder(nums);
+       int num= finder(nums);
+        System.out.println(num);
     }
     static int finder(int [] nums){
         int count = 0;
@@ -22,9 +23,9 @@ public class SingleNumber {
             }
             System.out.println("At index:"+idx);
               if (count == 1){
-                System.out.println(nums[idx]);
+                System.out.println(num);
                 System.out.println(count);
-                    return nums[idx];
+                    return num;
                 }
         }
         return -1;
