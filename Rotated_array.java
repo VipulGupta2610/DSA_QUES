@@ -12,7 +12,7 @@ public class Rotated_array {
         int idx = -1;
         if (nums[peak] == target) {
             return peak;
-        } else if (target > nums[0]) {
+        } else if (target >= nums[0]) {
             idx = findIdxOfTrgt(nums, target, 0, peak);
         } else {
             idx = findIdxOfTrgt(nums, target, peak + 1, nums.length - 1);
@@ -22,15 +22,13 @@ public class Rotated_array {
 
     static int findIdxOfTrgt(int[] nums, int target, int start, int end) {
         while (start <= end) {
-            int mid = start + (end - start)/2;
-            if (nums[mid] == target){
+            int mid = start + (end - start) / 2;
+            if (nums[mid] == target) {
                 return mid;
-            }
-            else if (target < nums[mid]){
-                end = mid-1;
-            }
-            else{
-                start = mid+1;
+            } else if (target < nums[mid]) {
+                end = mid - 1;
+            } else {
+                start = mid + 1;
             }
         }
         return -1;
@@ -39,18 +37,21 @@ public class Rotated_array {
     static int peakIndex(int[] nums) {
         int start = 0;
         int end = nums.length - 1;
-        while (start <= end) {
+        if (nums[0] < nums[nums.length - 1]) {
+            return nums.length - 1;
+        }
+        while (start < end) {
             int mid = start + (end - start) / 2;
-            if (nums[0] > nums[nums.length - 1]) {
-                if (nums[mid] > nums[mid + 1]) {
-                    return mid;
-                }
-                if (nums[mid] < nums[mid + 1]) {
-                    end = mid - 1;
-                }
-            } else {
-                return end;
+            if (mid < nums.length - 1 && nums[mid] > nums[mid + 1]) {
+                return mid;
             }
+        if (nums[mid] >= nums[0]) {
+            // We are in the left sorted part, so pivot is to the right.
+            start = mid + 1;
+        } else {
+            // We are in the right sorted part, so pivot is to the left.
+            end = mid - 1;
+        }
         }
         return -1;
     }
