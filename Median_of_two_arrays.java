@@ -11,6 +11,7 @@ public class Median_of_two_arrays {
     }
 
     static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        // index out of bound error
         int m = nums1.length;
         int n = nums2.length;
         int[] merged = new int[m + n];
