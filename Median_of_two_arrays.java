@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class Median_of_two_arrays {
     public static void main(String[] args) {
-        int[] nums1 = { 1, 2, 4,5 };
-        int[] nums2 = { 3, 6, 7 };
+        int[] nums1 = { 1, 2};
+        int[] nums2 = { 3,4 };
       double ans =   findMedianSortedArrays(nums1, nums2);
       System.out.println(ans);
     }
@@ -42,7 +42,8 @@ public class Median_of_two_arrays {
         System.out.println(Arrays.toString(merged_array));
         if (merged_array.length%2 == 0){
             int mid = merged_array.length/2;
-            return (merged_array[mid] + merged_array[mid+1])/2;
+            median = (merged_array[mid] + merged_array[mid+1])/2;
+            return median;
         }
         else{
             int mid = merged_array.length/2;
