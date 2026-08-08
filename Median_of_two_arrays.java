@@ -2,12 +2,14 @@ package pkg;
 
 import java.util.Arrays;
 
+import pkg.merge;
+
 public class Median_of_two_arrays {
     public static void main(String[] args) {
-        int[] nums1 = { 1, 2};
-        int[] nums2 = { 3,4 };
-      double ans =   findMedianSortedArrays(nums1, nums2);
-      System.out.println(ans);
+        int[] nums1 = { 1, 2 };
+        int[] nums2 = { 3, 4 };
+        double ans = findMedianSortedArrays(nums1, nums2);
+        System.out.println(ans);
     }
 
     static double findMedianSortedArrays(int[] nums1, int[] nums2) {
@@ -17,8 +19,8 @@ public class Median_of_two_arrays {
         int nIdx = 0;
         int[] merged_array = new int[m + n];
         int k = 0;
-        double median =0;
-        while ( mIdx < m && nIdx < n) {
+        double median = 0;
+        while (mIdx < m && nIdx < n) {
             if (nums1[mIdx] <= nums2[nIdx]) {
                 merged_array[k] = nums1[mIdx];
                 k++;
@@ -40,13 +42,18 @@ public class Median_of_two_arrays {
             nIdx++;
         }
         System.out.println(Arrays.toString(merged_array));
-        if (merged_array.length%2 == 0){
-            int mid = merged_array.length/2;
-            median = (merged_array[mid] + merged_array[mid+1])/2;
+        if (merged_array.length % 2 == 0) {
+            System.out.println("Merged array length: " + merged_array.length);
+            int mid = merged_array.length / 2;
+            System.out.println(mid);
+            median = (merged_array[mid] + merged_array[mid - 1]) / 2;
+            System.out.println(median);
             return median;
-        }
-        else{
-            int mid = merged_array.length/2;
+        } else {
+            System.out.println("Merged array length: " + merged_array.length);
+            int mid = merged_array.length / 2;
+            System.out.println(mid);
+            System.out.println(merged_array[mid]);
             return merged_array[mid];
         }
     }
