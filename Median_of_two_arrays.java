@@ -7,10 +7,10 @@ public class Median_of_two_arrays {
     public static void main(String[] args) {
         int [] nusm1 = {1,2,5,4};
         int [] nums2 = {3,6,7};
-        double ans = findMedianSortedArrays(nums2, nums2);
+    findMedianSortedArrays(nums2, nums2);
     }
 
-    static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+    static void findMedianSortedArrays(int[] nums1, int[] nums2) {
         int m = nums1.length;
         int n = nums2.length;
         int mIdx = 0;
@@ -30,7 +30,15 @@ public class Median_of_two_arrays {
             }
         }
         while (mIdx<m) {
-            
+            merged_array[k] = nums1[mIdx];
+            k++;
+            mIdx++;
         }
+        while (nIdx<n) {
+            merged_array[k] = nums2[nIdx];
+            k++;
+            nIdx++;
+        }
+        System.out.println(Arrays.toString(merged_array));
     }
 }
