@@ -2,43 +2,51 @@ package pkg;
 
 import java.util.Arrays;
 
-
 public class Median_of_two_arrays {
     public static void main(String[] args) {
-        int [] nusm1 = {1,2,5,4};
-        int [] nums2 = {3,6,7};
-    findMedianSortedArrays(nums2, nums2);
+        int[] nums1 = { 1, 2, 4,5 };
+        int[] nums2 = { 3, 6, 7 };
+      double ans =   findMedianSortedArrays(nums1, nums2);
+      System.out.println(ans);
     }
 
-    static void findMedianSortedArrays(int[] nums1, int[] nums2) {
+    static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int m = nums1.length;
         int n = nums2.length;
         int mIdx = 0;
         int nIdx = 0;
-        int [] merged_array = new int[m+n];
+        int[] merged_array = new int[m + n];
         int k = 0;
-        while (k<merged_array.length && mIdx < m && nIdx < n) {
-            if (nums1[mIdx] < nums2[nIdx]){
-                merged_array[k] =  nums1[mIdx];
+        double median =0;
+        while ( mIdx < m && nIdx < n) {
+            if (nums1[mIdx] <= nums2[nIdx]) {
+                merged_array[k] = nums1[mIdx];
                 k++;
                 mIdx++;
-            }
-            else if (nums2[nIdx] < nums1[mIdx]){
+            } else if (nums2[nIdx] < nums1[mIdx]) {
                 merged_array[k] = nums2[nIdx];
                 k++;
                 nIdx++;
             }
         }
-        while (mIdx<m) {
+        while (mIdx < m) {
             merged_array[k] = nums1[mIdx];
             k++;
             mIdx++;
         }
-        while (nIdx<n) {
+        while (nIdx < n) {
             merged_array[k] = nums2[nIdx];
             k++;
             nIdx++;
         }
         System.out.println(Arrays.toString(merged_array));
+        if (merged_array.length%2 == 0){
+            int mid = merged_array.length/2;
+            return (merged_array[mid] + merged_array[mid+1])/2;
+        }
+        else{
+            int mid = merged_array.length/2;
+            return merged_array[mid];
+        }
     }
 }
