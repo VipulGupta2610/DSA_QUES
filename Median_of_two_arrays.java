@@ -11,23 +11,26 @@ public class Median_of_two_arrays {
     }
 
     static double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        // index out of bound error
         int m = nums1.length;
         int n = nums2.length;
-        int[] merged = new int[m + n];
-        int n1idx = m - 1;
-        int n2idx = n - 1;
-        for (int i = merged.length - 1; i >= 0; i--) {
-            if (nums1[n1idx] > nums2[n2idx]) {
-                merged[i] = nums1[n1idx];
-                n1idx -= 1;
+        int mIdx = 0;
+        int nIdx = 0;
+        int [] merged_array = new int[m+n];
+        int k = 0;
+        while (k<merged_array.length && mIdx < m && nIdx < n) {
+            if (nums1[mIdx] < nums2[nIdx]){
+                merged_array[k] =  nums1[mIdx];
+                k++;
+                mIdx++;
             }
-            else {
-                merged[i] = nums2[n2idx];
-                n2idx--;
+            else if (nums2[nIdx] < nums1[mIdx]){
+                merged_array[k] = nums2[nIdx];
+                k++;
+                nIdx++;
             }
         }
-        System.out.println(Arrays.toString(merged));
-        return 0.0;
+        while (mIdx<m) {
+            
+        }
     }
 }
