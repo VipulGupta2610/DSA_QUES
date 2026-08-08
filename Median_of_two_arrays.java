@@ -46,7 +46,7 @@ public class Median_of_two_arrays {
             System.out.println("Merged array length: " + merged_array.length);
             int mid = merged_array.length / 2;
             System.out.println(mid);
-            median = (merged_array[mid] + merged_array[mid - 1]) / 2;
+            median = (merged_array[mid] + merged_array[mid - 1]) / 2.0;
             System.out.println(median);
             return median;
         } else {
