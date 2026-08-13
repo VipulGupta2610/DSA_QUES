@@ -7,11 +7,12 @@ public class pow_x_n {
     }
 
     static double myPow(double x, int n) {
-        int ans = 1;
+        double ans = 1;
         double base = x;
         if (n < 0) {
+            n = -n;
             System.out.println(-n);
-            while (-n > 0) {
+            while (n > 0) {
                 if ((n&1)==1){
                     ans *=base;
                 }
