@@ -7,20 +7,32 @@ public class pow_x_n {
     }
 
     static double myPow(double x, int n) {
-        double sol = 1;
-        if (n > 0) {
-            System.out.println("Entered if area");
-            for (int i = 1; i <= n; i++) {
-                sol = sol * x;
-            }
-        } else {
-            int num_after_divided = 1;
-            System.out.println("Entered else area");
-              for (int i = 1; i <= (-n); i++) {
-                sol = sol * x;
-            }
-            return num_after_divided/sol;
-        }
-        return sol;
+        
     }
 }
+// package pkg;
+
+// public class pow_x_n {
+//     public static void main(String[] args) {
+//         double ans = myPow(2.0, -3);
+//         System.out.println(ans);
+//     }
+
+//     static double myPow(double x, int n) {
+//         double sol = 1;
+//         if (n > 0) {
+//             System.out.println("Entered if area");
+//             for (int i = 1; i <= n; i++) {
+//                 sol = sol * x;
+//             }
+//         } else {
+//             int num_after_divided = 1;
+//             System.out.println("Entered else area");
+//               for (int i = 1; i <= (-n); i++) {
+//                 sol = sol * x;
+//             }
+//             return num_after_divided/sol;
+//         }
+//         return sol;
+//     }
+// }
