@@ -7,7 +7,14 @@ public class pow_x_n {
     }
 
     static double myPow(double x, int n) {
-        
+        int ans = 1;
+        double base = x;
+        if (n<0){
+
+        }
+        else{
+            
+        }
     }
 }
 // package pkg;
