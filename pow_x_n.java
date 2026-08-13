@@ -9,15 +9,16 @@ public class pow_x_n {
     static double myPow(double x, int n) {
         double ans = 1;
         double base = x;
-        if (n < 0) {
-            n = -n;
+        long power = n;
+        if (power < 0) {
+            power = -power;
             System.out.println(-n);
-            while (n > 0) {
-                if ((n&1)==1){
+            while (power > 0) {
+                if ((power&1)==1){
                     ans *=base;
                 }
                 base *=base;
-                n = n>>1;
+                power = power>>1;
             }
             return 1/ans;
         } else {
