@@ -2,7 +2,7 @@ package pkg;
 
 public class pow_x_n {
     public static void main(String[] args) {
-        double ans = myPow(2.0, 4);
+        double ans = myPow(2.0, -4);
         System.out.println(ans);
     }
 
@@ -10,9 +10,15 @@ public class pow_x_n {
         int ans = 1;
         double base = x;
         if (n < 0) {
-            while () {
-                
+            System.out.println(-n);
+            while (-n > 0) {
+                if ((n&1)==1){
+                    ans *=base;
+                }
+                base *=base;
+                n = n>>1;
             }
+            return 1/ans;
         } else {
             while (n > 0) {
                 if ((n & 1) == 1) {
