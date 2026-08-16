@@ -12,7 +12,7 @@ public class minimum_of_maximum_ans {
         int max = maxItem(quantities);
         while (min < max) {
             int mid = min + (max - min) / 2;
-            if (isValid(mid, n ,max)) {
+            if (isValid(mid, n, max, quantities)) {
                 min = mid;
             } else {
                 max = mid;
@@ -21,8 +21,20 @@ public class minimum_of_maximum_ans {
         return max;
     }
 
-    static boolean isValid(int maxAllowed, int stores , int totalPr) {
+    static boolean isValid(int maxAllowed, int totalStores, int totalProducts, int[] array) {
         int i = 1;
+        while (totalStores > 0) {
+            for (int prodcuts : array) {
+                int productsLeft = prodcuts;
+                while (productsLeft>0) {
+                    if (productsLeft-maxAllowed >=0){
+                        productsLeft-=maxAllowed;
+                    }else{
+                        
+                    }
+                }
+            }
+        }
     }
 
     static int maxItem(int[] arr) {
