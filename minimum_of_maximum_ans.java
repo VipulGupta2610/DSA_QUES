@@ -12,7 +12,7 @@ public class minimum_of_maximum_ans {
         int max = maxItem(quantities);
         while (min < max) {
             int mid = min + (max - min) / 2;
-            if (isValid(mid)) {
+            if (isValid(mid, n ,max)) {
                 min = mid;
             } else {
                 max = mid;
@@ -21,8 +21,8 @@ public class minimum_of_maximum_ans {
         return max;
     }
 
-    static boolean isValid(int mid) {
-        
+    static boolean isValid(int maxAllowed, int stores , int totalPr) {
+        int i = 1;
     }
 
     static int maxItem(int[] arr) {
