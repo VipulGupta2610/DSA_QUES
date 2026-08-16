@@ -10,8 +10,19 @@ public class minimum_of_maximum_ans {
     static int minimizedMaximum(int n, int[] quantities) {
         int min = 0;
         int max = maxItem(quantities);
-        System.out.println(max);
+        while (min < max) {
+            int mid = min + (max - min) / 2;
+            if (isValid(mid)) {
+                min = mid;
+            } else {
+                max = mid;
+            }
+        }
         return max;
+    }
+
+    static boolean isValid(int mid) {
+        
     }
 
     static int maxItem(int[] arr) {
