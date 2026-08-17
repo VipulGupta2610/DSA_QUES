@@ -1,14 +1,16 @@
 package pkg;
 
+
 public class minimum_of_maximum_ans {
     public static void main(String[] args) {
         int[] arr = { 11, 6 };
         int n = 6;
         int ans = minimizedMaximum(n, arr);
+        System.out.println(ans);
     }
 
     static int minimizedMaximum(int n, int[] quantities) {
-        int min = 0;
+        int min = 1;
         int max = maxItem(quantities);
         System.out.println(max);
         while (min < max) {
