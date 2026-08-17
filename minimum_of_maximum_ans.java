@@ -11,32 +11,28 @@ public class minimum_of_maximum_ans {
         int min = 0;
         int max = maxItem(quantities);
         System.out.println(max);
-        // while (min < max) {
-        //     int mid = min + (max - min) / 2;
-        //     if (isValid(mid, n, max, quantities)) {
-        //         min = mid;
-        //     } else {
-        //         max = mid;
-        //     }
-        // }
+        while (min < max) {
+            int mid = min + (max - min) / 2;
+            if (isValid(mid, n, quantities)) {
+                min = mid;
+            } else {
+                max = mid;
+            }
+        }
         return max;
     }
 
-    // static boolean isValid(int maxAllowed, int totalStores, int totalProducts, int[] array) {
-    //     int i = 1;
-    //     while (totalStores > 0) {
-    //         for (int prodcuts : array) {
-    //             int productsLeft = prodcuts;
-    //             while (productsLeft>0) {
-    //                 if (productsLeft-maxAllowed >=0){
-    //                     productsLeft-=maxAllowed;
-    //                 }else{
-
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+    static boolean isValid(int maxAllowed, int totalStores, int[] array) {
+        int storesRequired = 0;
+        for(int products:array){
+            int stores = (products+maxAllowed-1)/maxAllowed;
+            storesRequired+=stores;
+            if (storesRequired>totalStores){
+                return false;
+            }
+        }
+        return true;
+    }
 
     static int maxItem(int[] arr) {
         int num = 0;
