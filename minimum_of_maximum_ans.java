@@ -14,9 +14,9 @@ public class minimum_of_maximum_ans {
         while (min < max) {
             int mid = min + (max - min) / 2;
             if (isValid(mid, n, quantities)) {
-                min = mid;
-            } else {
                 max = mid;
+            } else {
+                min = mid+1;
             }
         }
         return max;
