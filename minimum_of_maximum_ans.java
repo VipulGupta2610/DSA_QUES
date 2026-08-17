@@ -10,37 +10,40 @@ public class minimum_of_maximum_ans {
     static int minimizedMaximum(int n, int[] quantities) {
         int min = 0;
         int max = maxItem(quantities);
-        while (min < max) {
-            int mid = min + (max - min) / 2;
-            if (isValid(mid, n, max, quantities)) {
-                min = mid;
-            } else {
-                max = mid;
-            }
-        }
+        System.out.println(max);
+        // while (min < max) {
+        //     int mid = min + (max - min) / 2;
+        //     if (isValid(mid, n, max, quantities)) {
+        //         min = mid;
+        //     } else {
+        //         max = mid;
+        //     }
+        // }
         return max;
     }
 
-    static boolean isValid(int maxAllowed, int totalStores, int totalProducts, int[] array) {
-        int i = 1;
-        while (totalStores > 0) {
-            for (int prodcuts : array) {
-                int productsLeft = prodcuts;
-                while (productsLeft>0) {
-                    if (productsLeft-maxAllowed >=0){
-                        productsLeft-=maxAllowed;
-                    }else{
-                        
-                    }
-                }
-            }
-        }
-    }
+    // static boolean isValid(int maxAllowed, int totalStores, int totalProducts, int[] array) {
+    //     int i = 1;
+    //     while (totalStores > 0) {
+    //         for (int prodcuts : array) {
+    //             int productsLeft = prodcuts;
+    //             while (productsLeft>0) {
+    //                 if (productsLeft-maxAllowed >=0){
+    //                     productsLeft-=maxAllowed;
+    //                 }else{
+
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
     static int maxItem(int[] arr) {
         int num = 0;
         for (int i = 0; i < arr.length; i++) {
-            num += arr[i];
+            if (arr[i]>num){
+                num = arr[i];
+            }
         }
         return num;
     }
