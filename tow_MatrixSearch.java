@@ -11,13 +11,14 @@ public class tow_MatrixSearch {
 
     static boolean searchMatrix(int[][] matrix, int target) {
         int[] duplicate = new int[matrix.length * (matrix[0].length)];
-        int d_idx = 0;
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                duplicate[d_idx] = matrix[i][j];
-                d_idx++;
-            }
-        }
+        // creating duplicate array is not allowed but it was working fine 
+        // int d_idx = 0;
+        // for (int i = 0; i < matrix.length; i++) {
+        //     for (int j = 0; j < matrix[i].length; j++) {
+        //         duplicate[d_idx] = matrix[i][j];
+        //         d_idx++;
+        //     }
+        // }
         int start = 0;
         int end = duplicate.length - 1;
         while (start < end) {
