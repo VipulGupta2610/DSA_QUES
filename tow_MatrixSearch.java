@@ -10,7 +10,10 @@ public class tow_MatrixSearch {
     }
 
     static boolean searchMatrix(int [][] matrix , int target){
-        
+        int divider = matrix.length-1;
+        for (int i = 0; i < matrix.length; i++) {
+            System.out.println(i%divider);
+        }
     }
 
     // static boolean searchMatrix(int[][] matrix, int target) {
