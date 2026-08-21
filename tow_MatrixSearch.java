@@ -5,6 +5,7 @@ public class tow_MatrixSearch {
     public static void main(String[] args) {
         int[][] matrix = { { 1, 3, 5, 7 }, { 9, 11, 13, 15 }, { 17, 19, 21, 23 } };
         int target = 13;
+        System.out.println(matrix[0].length-1);
         boolean isThere = searchMatrix(matrix, target);
         System.out.println(isThere);
     }
@@ -17,11 +18,13 @@ public class tow_MatrixSearch {
         int maxColumn = matrix[0].length - 1;
         while (row <= maxRow && column <= maxColumn && row>=0 && column>=0) {
             int midRow = row + (maxRow - row) / 2;
-            int midCol = column + (column - maxColumn) / 2;
-            if (matrix[row][column] == target) {
+            int midCol = column + (maxColumn - column) / 2;
+            System.out.println("Mid row : "+midRow);
+            System.out.println("Mid col : "+midCol);
+            if (matrix[midRow][midCol] == target) {
                 return true;
             }
-            if (target < matrix[row][column]) {
+            if (target < matrix[midRow][maxColumn]) {
                 maxRow = midRow;
                 maxColumn = midCol;
             } else {
