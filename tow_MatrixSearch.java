@@ -9,6 +9,10 @@ public class tow_MatrixSearch {
         System.out.println(isThere);
     }
 
+    static boolean searchMatrix(int [][] matrix , int target){
+        
+    }
+
     // static boolean searchMatrix(int[][] matrix, int target) {
     //     int[] duplicate = new int[matrix.length * (matrix[0].length)];
     //     // creating duplicate array is not allowed but it was working fine 
