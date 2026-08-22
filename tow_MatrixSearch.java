@@ -15,14 +15,14 @@ public class tow_MatrixSearch {
         int rEnd = matrix.length - 1;
         int cStart = 0;
         int cEnd = matrix[0].length - 1;
-        while (cStart <= cEnd) {
+        while (rStart <= rEnd) {
             int midRow = rStart + (rEnd - rStart) / 2;
             if (target >= matrix[midRow][cStart] && target <= matrix[midRow][cEnd]) {
                 return simpleBinarySearch(matrix, target, midRow, cStart, cEnd);
             } else if (target > matrix[midRow][cEnd]) {
-                rStart = midRow;
+                rStart = midRow+1;
             } else {
-                rEnd = midRow;
+                rEnd = midRow-1;
             }
         }
         return false;
@@ -35,14 +35,14 @@ public class tow_MatrixSearch {
                 return true;
             }
             else if (target>matrix[row][mid]){
-                start = mid;
+                start = mid+1;
             }
             else{
                 end = mid-1;
             }
         }
         return false;
-    }
+    }}
     // static boolean searchMatrix(int[][] matrix, int target) {
     // int divider = matrix.length;
     // int row = 0;
@@ -92,4 +92,3 @@ public class tow_MatrixSearch {
     // }
     // return false;
     // }
-}
