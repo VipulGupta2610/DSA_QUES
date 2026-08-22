@@ -11,28 +11,7 @@ public class tow_MatrixSearch {
     }
 
     static boolean searchMatrix(int[][] matrix, int target) {
-        int divider = matrix.length;
-        int row = 0;
-        int maxRow = matrix.length - 1;
-        int column = 0;
-        int maxColumn = matrix[0].length - 1;
-        while (row <= maxRow && column <= maxColumn && row>=0 && column>=0) {
-            int midRow = row + (maxRow - row) / 2;
-            int midCol = column + (maxColumn - column) / 2;
-            System.out.println("Mid row : "+midRow);
-            System.out.println("Mid col : "+midCol);
-            if (matrix[midRow][midCol] == target) {
-                return true;
-            }
-            if (target < matrix[midRow][maxColumn]) {
-                maxRow = midRow;
-                maxColumn = midCol;
-            } else {
-                row=midRow;
-                column=midCol;
-            }
-        }
-        return false;
+        
     }
 
     // static boolean searchMatrix(int[][] matrix, int target) {
