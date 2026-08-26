@@ -1,16 +1,18 @@
 package pkg;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Three_sum {
     public static void main(String[] args) {
         int[] arr = { -1, 0, 1, 2, -1, -4 };
-ArrayList<ArrayList<Integer>> ans = threeSum(arr);
-System.out.println(ans);
+        List<List<Integer>> ans = threeSum(arr);
+        System.out.println(ans);
     }
 
-    static ArrayList<ArrayList<Integer>> threeSum(int[] nums) {
-        ArrayList<ArrayList<Integer>> list = new ArrayList<>();
+    static List<List<Integer>> threeSum(int[] nums) {
+        List<List<Integer>> list = new ArrayList<>();
+
         for (int i = 0; i < nums.length; i++) {
             int j = 0;
             for (j = 0; j < nums.length; j++) {
