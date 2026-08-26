@@ -14,16 +14,14 @@ public class Three_sum {
         List<List<Integer>> list = new ArrayList<>();
 
         for (int i = 0; i < nums.length; i++) {
-            int j = 0;
-            for (j = 0; j < nums.length; j++) {
+
+            for (int j = i + 1; j < nums.length; j++) {
                 if (i == j) {
                     continue;
                 }
-                int j2 = 0;
-                for (j2 = 0; j2 < nums.length; j2++) {
-                    if (i == j || i == j2 || j == j2) {
-                        continue;
-                    }
+
+                for (int j2 = j + 1; j2 < nums.length; j2++) {
+
                     if (nums[i] + nums[j] + nums[j2] == 0) {
                         ArrayList<Integer> triplet = new ArrayList<>();
                         triplet.add(nums[i]);
@@ -36,4 +34,30 @@ public class Three_sum {
         }
         return list;
     }
+    // static List<List<Integer>> threeSum(int[] nums) {
+    // List<List<Integer>> list = new ArrayList<>();
+
+    // for (int i = 0; i < nums.length; i++) {
+    // int j = 0;
+    // for (j = 0; j < nums.length; j++) {
+    // if (i == j) {
+    // continue;
+    // }
+    // int j2 = 0;
+    // for (j2 = 0; j2 < nums.length; j2++) {
+    // if (i == j || i == j2 || j == j2) {
+    // continue;
+    // }
+    // if (nums[i] + nums[j] + nums[j2] == 0) {
+    // ArrayList<Integer> triplet = new ArrayList<>();
+    // triplet.add(nums[i]);
+    // triplet.add(nums[j]);
+    // triplet.add(nums[j2]);
+    // list.add(triplet);
+    // }
+    // }
+    // }
+    // }
+    // return list;
+    // }
 }
