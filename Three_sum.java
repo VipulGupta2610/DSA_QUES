@@ -24,7 +24,10 @@ public class Three_sum {
                         triplet.add(nums[i]);
                         triplet.add(nums[j]);
                         triplet.add(nums[j2]);
-                        triplet.sort();
+                        triplet.sort(null);
+                        if (list.contains(triplet)){
+                            continue;
+                        }
                         list.add(triplet);
                     }
                 }
