@@ -12,10 +12,85 @@ public class Three_sum {
     }
 
     static List<List<Integer>> threeSum(int[] nums) {
-        
-    }
+        List<List<Integer>> list = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++) {
 
-    // static List<List<Integer>> threeSum(int[] nums) {
+            HashSet<Integer> set = new HashSet<>();
+
+            for (int j = 0; j < nums.length; j++) {
+                set.add(nums[j]);
+            }
+
+            for (int j = 0; j < nums.length; j++) {
+                int toFind = -(nums[i]+nums[j]);
+                set.remove(nums[j]);
+                set.remove(nums[i]);
+
+                if (set.contains(toFind)){
+                 ArrayList<Integer> triplet = new ArrayList<>();
+                 triplet.add(nums[i]);
+                 triplet.add(nums[j]);
+                 triplet.add(toFind);
+                 if (list.contains(triplet)){
+                    continue;
+                 }
+                 list.add(triplet);
+                 continue;
+                }
+                
+            }
+        }
+        return list;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// static List<List<Integer>> threeSum(int[] nums) {
 //     List<List<Integer>> list = new ArrayList<>();
 
 //     for(
@@ -67,4 +142,3 @@ public class Three_sum {
 // }
 // return list;
 // }
-}
