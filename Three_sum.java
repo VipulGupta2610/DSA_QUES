@@ -19,7 +19,7 @@ public class Three_sum {
 
             HashSet<Integer> set = new HashSet<>();
 
-            for (int j = 0; j < nums.length; j++) {
+            for (int j = i+1; j < nums.length; j++) {
 
                 int third = target-nums[j];
                 
@@ -33,7 +33,7 @@ public class Three_sum {
                         list.add(triplet);
                     }
                 }
-                set.add(third);
+                set.add(nums[j]);
             }
         }
         return list;
