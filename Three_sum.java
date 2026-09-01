@@ -22,7 +22,9 @@ public class Three_sum {
             for (int j = 0; j < nums.length; j++) {
                 int third = target-nums[j];
                 
-                if (set.contains(set))
+                if (set.contains(third)){
+
+                }
                 
             }
         }
