@@ -29,7 +29,9 @@ public class Three_sum {
                     triplet.add(nums[j]);
                     triplet.add(third);
                     triplet.sort(null);
-                    list.add(triplet);
+                    if (!list.contains(triplet)){
+                        list.add(triplet);
+                    }
                 }
                 set.add(third);
             }
