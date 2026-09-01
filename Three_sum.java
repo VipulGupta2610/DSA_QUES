@@ -60,6 +60,33 @@ public class Three_sum {
 
 
 
+// static List<List<Integer>> threeSum(int[] nums) {
+//     List<List<Integer>> list = new ArrayList<>();
+//     for (int i = 0; i < nums.length; i++) {
+
+//         int target = -nums[i];
+
+//         HashSet<Integer> set = new HashSet<>();
+
+//         for (int j = i+1; j < nums.length; j++) {
+
+//             int third = target-nums[j];
+            
+//             if (set.contains(third)){
+//                 ArrayList<Integer> triplet = new ArrayList<>();
+//                 triplet.add(nums[i]);
+//                 triplet.add(nums[j]);
+//                 triplet.add(third);
+//                 triplet.sort(null);
+//                 if (!list.contains(triplet)){
+//                     list.add(triplet);
+//                 }
+//             }
+//             set.add(nums[j]);
+//         }
+//     }
+//     return list;
+// }
 
 
 
