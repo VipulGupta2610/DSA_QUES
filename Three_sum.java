@@ -20,12 +20,18 @@ public class Three_sum {
             HashSet<Integer> set = new HashSet<>();
 
             for (int j = 0; j < nums.length; j++) {
+
                 int third = target-nums[j];
                 
                 if (set.contains(third)){
-
+                    ArrayList<Integer> triplet = new ArrayList<>();
+                    triplet.add(nums[i]);
+                    triplet.add(nums[j]);
+                    triplet.add(third);
+                    triplet.sort(null);
+                    list.add(triplet);
                 }
-                
+                set.add(third);
             }
         }
         return list;
