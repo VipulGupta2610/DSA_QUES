@@ -12,7 +12,7 @@ public class Three_sum {
         List<List<Integer>> ans = threeSum(arr);
         System.out.println(ans);
     }
-
+// submitted
     static List<List<Integer>> threeSum(int[] nums) {
 
         ArrayList<Integer> sortedarray = new ArrayList<>();
