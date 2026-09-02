@@ -13,63 +13,63 @@ public class Three_sum {
         System.out.println(ans);
     }
 
-   static List<List<Integer>> threeSum(int[] nums) {
+    static List<List<Integer>> threeSum(int[] nums) {
 
-    ArrayList<Integer> sortedarray = new ArrayList<>();
+        ArrayList<Integer> sortedarray = new ArrayList<>();
 
-    for (int num : nums) {
-        sortedarray.add(num);
-    }
-
-    Collections.sort(sortedarray);
-
-    List<List<Integer>> list = new ArrayList<>();
-
-    for (int i = 0; i < sortedarray.size() - 2; i++) {
-
-        // Skip duplicate first numbers
-        if (i > 0 && sortedarray.get(i) == sortedarray.get(i - 1)) {
-            continue;
+        for (int num : nums) {
+            sortedarray.add(num);
         }
 
-        int j = i + 1;
-        int k = sortedarray.size() - 1;
+        Collections.sort(sortedarray);
 
-        while (j < k) {
+        List<List<Integer>> list = new ArrayList<>();
 
-            int sum = sortedarray.get(i)
-                    + sortedarray.get(j)
-                    + sortedarray.get(k);
+        for (int i = 0; i < sortedarray.size() - 2; i++) {
 
-            if (sum == 0) {
+            // Skip duplicate first numbers
+            if (i > 0 && sortedarray.get(i).equals(sortedarray.get(i - 1))) {
+                continue;
+            }
 
-                ArrayList<Integer> triplet = new ArrayList<>();
+            int j = i + 1;
+            int k = sortedarray.size() - 1;
 
-                triplet.add(sortedarray.get(i));
-                triplet.add(sortedarray.get(j));
-                triplet.add(sortedarray.get(k));
+            while (j < k) {
 
-                list.add(triplet);
+                int sum = sortedarray.get(i)
+                        + sortedarray.get(j)
+                        + sortedarray.get(k);
 
-                j++;
-                k--;
+                if (sum == 0) {
 
-                // Skip duplicate second numbers
-                while (j < k &&
-                       sortedarray.get(j) == sortedarray.get(j - 1)) {
+                    ArrayList<Integer> triplet = new ArrayList<>();
+
+                    triplet.add(sortedarray.get(i));
+                    triplet.add(sortedarray.get(j));
+                    triplet.add(sortedarray.get(k));
+
+                    list.add(triplet);
+
+                    j++;
+                    k--;
+
+                    // Skip duplicate second numbers
+                    while (j < k &&
+                            sortedarray.get(j).equals(sortedarray.get(j - 1))) {
+                        j++;
+                    }
+
+                } else if (sum > 0) {
+                    k--;
+                } else {
                     j++;
                 }
-
-            } else if (sum > 0) {
-                k--;
-            } else {
-                j++;
             }
         }
-    }
 
-    return list;
-}
+        return list;
+    }
 }
 
 // static List<List<Integer>> threeSum(int[] nums) {
