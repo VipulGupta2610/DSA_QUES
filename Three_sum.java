@@ -1,6 +1,7 @@
 package pkg;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -20,22 +21,26 @@ public class Three_sum {
             sortedarray.add(nums[i]);
         }
 
+        Collections.sort(sortedarray);
+
         int n = nums.length - 1;
 
-        HashSet<List<Integer>> list = new HashSet<>();
+        List<List<Integer>> list = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
+            if (i > 0 && sortedarray.get(i) == sortedarray.get(i - 1)) {
+                continue;
+            }
             int j = i + 1;
             int k = n;
             while (j < k) {
-                if (j > 0 && sortedarray.get(j) == sortedarray.get(j - 1)) {
-                    continue;
-                }
                 if (sortedarray.get(i) + sortedarray.get(j) + sortedarray.get(k) == 0) {
                     ArrayList<Integer> triplet = new ArrayList<>();
                     triplet.add(sortedarray.get(i));
                     triplet.add(sortedarray.get(j));
                     triplet.add(sortedarray.get(k));
                     list.add(triplet);
+                    j++;
+                    k--;
                     while (j<k && sortedarray.get(j)==sortedarray.get(j-1)) {
                         j++;
                     }
@@ -47,6 +52,7 @@ public class Three_sum {
                 }
             }
         }
+        return list;
     }
 }
 
