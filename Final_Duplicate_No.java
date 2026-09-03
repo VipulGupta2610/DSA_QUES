@@ -16,7 +16,9 @@ public class Final_Duplicate_No {
                 arr[i] = arr[correctIdx];
                 arr[correctIdx] = temp;
             }
-            i++;
+            else{
+                i++;
+            }
         }
         for (int j = 0; j < arr.length; j++) {
             if (arr[j]!=j+1){
