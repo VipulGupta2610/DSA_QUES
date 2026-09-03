@@ -23,6 +23,7 @@ public class Final_Duplicate_No {
                 return arr[j];
             }
         }
+        return -1;
     }
 
 }
