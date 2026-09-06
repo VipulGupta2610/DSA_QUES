@@ -13,9 +13,16 @@ public class Product_of_array {
         int [] anss = new int[nums.length];
         int totalPrd=1;
         for (int i = 0; i < anss.length; i++) {
+            if (nums[i]==0){
+                continue;
+            }
             totalPrd*=nums[i];
         }
         for (int i = 0; i < anss.length; i++) {
+            if (nums[i]==0){
+                anss[i]=0;
+                continue;
+            }
             int ans = totalPrd/nums[i];
             anss[i]=ans;
         }
