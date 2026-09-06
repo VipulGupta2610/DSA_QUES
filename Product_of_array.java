@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Product_of_array {
     public static void main(String[] args) {
-        int [] arr = {1,2,3,4};
+        int [] arr = {-1,1,0,-3,3};
         int [] ans = productExceptSelf(arr);
         System.out.println(Arrays.toString(ans));
     }
