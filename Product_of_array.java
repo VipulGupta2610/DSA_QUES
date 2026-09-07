@@ -11,24 +11,15 @@ public class Product_of_array {
     }
 
     static  int[] productExceptSelf(int[] nums) {
-        int [] anss = new int[nums.length];
-        int totalPrd = 1;
-        int final_prd = 1;
-        for (int i = 0; i < anss.length; i++) {
-            totalPrd*=nums[i];
-            if (nums[i]==0){
-                continue;
+        int [] ans = new int[nums.length];
+        int no_of_zeros=0;
+        for(int num : nums){
+            if (num==0){
+                no_of_zeros++;
             }
-            final_prd*=nums[i];
         }
-        for (int i = 0; i < anss.length; i++) {
-            if (nums[i]==0){
-                anss[i]=final_prd;
-                continue;
-            }
-            int ans = totalPrd/nums[i];
-            anss[i]=ans;
+        if (no_of_zeros>1){
+            return ans;
         }
-        return anss;
     }
 }
