@@ -25,14 +25,14 @@ public class Product_of_array {
             return ans;
         }
         for (int i = 0; i < nums.length; i++) {
-            if (no_of_zeros==1){
-                if (nums[i]==0){
-                    ans[i]=totalPrd;
-                }else{
-                    ans[i]=0;
+            if (no_of_zeros == 1) {
+                if (nums[i] == 0) {
+                    ans[i] = totalPrd;
+                } else {
+                    ans[i] = 0;
                 }
-            }else{
-                ans[i]=totalPrd/nums[i];
+            } else {
+                ans[i] = totalPrd / nums[i];
             }
         }
         return ans;
