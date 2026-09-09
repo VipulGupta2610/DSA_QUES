@@ -2,8 +2,8 @@ package pkg;
 
 public class ValidMountainArr {
     public static void main(String[] args) {
-        // int[] arr = { 0, 2, 1, 0};
-        int[] arr = { 1, 2, 3, 4, 8, 9, 10 };
+        int[] arr = { 0, 2, 1, 0};
+        // int[] arr = { 1, 2, 3, 4, 8, 9, 10 };
         boolean IsMountain = validMountainArray(arr);
         System.out.println(IsMountain);
     }
@@ -15,7 +15,7 @@ public class ValidMountainArr {
         if (peak == 0 || peak == arr.length-1){
             return false;
         }
-        return peak;
+        return true;
 
     }
 
