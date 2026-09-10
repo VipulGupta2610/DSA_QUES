@@ -12,7 +12,7 @@ public class validPalindrome {
         s = s.replace(" ", "");
         s = s.replace(":", "");
         int start = 0;
-        int end = s.length();
+        int end = s.length()-1;
         while (start<=end) {
             if (s.charAt(start)!=s.charAt(end)){
                 return false;
