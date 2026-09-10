@@ -2,7 +2,9 @@ package pkg;
 
 public class validPalindrome {
     public static void main(String[] args) {
-
+        String s = "A man, a plan, a canal: Panama";
+        boolean ans = isPalindrome(s);
+        System.out.println(ans);
     }
 
     static boolean isPalindrome(String s) {
@@ -12,7 +14,13 @@ public class validPalindrome {
         int start = 0;
         int end = s.length();
         while (start<=end) {
-            if (s.charAt(end))
+            if (s.charAt(start)!=s.charAt(end)){
+                return false;
+            }else{
+                start++;
+                end--;
+            }
         }
+        return  true;
     }
 }
