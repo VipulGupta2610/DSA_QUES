@@ -11,6 +11,8 @@ public class validPalindrome {
         s = s.replace(",", "");
         s = s.replace(" ", "");
         s = s.replace(":", "");
+        s = s.replace(".", "");
+        s = s.replace(";", "");
         s = s.toLowerCase();
         int start = 0;
         int end = s.length()-1;
