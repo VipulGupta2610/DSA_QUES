@@ -7,16 +7,17 @@ public class RemoveAllOcuurances {
     }
 
     static String removeOccurrences(String s, String part) {
-        if (s.isEmpty()){
+        if (s.isEmpty()) {
             return s;
         }
-        String newString="";
-        if (s.startsWith(part)){
-             newString=removeOccurrences(s.substring(part.length()), part);
-        }else{
-             newString=removeOccurrences(s.substring(0), part);
+        if (s.startsWith(part)) {
+            String newString = removeOccurrences(s.substring(part.length()), part);
+            return s.charAt(0) + newString;
+        } else {
+            String newString = removeOccurrences(s.substring(0), part);
+            return s.charAt(part.length())+newString;
         }
-        return newString;
+
     }
 
 }
