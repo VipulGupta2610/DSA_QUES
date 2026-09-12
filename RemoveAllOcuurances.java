@@ -2,7 +2,7 @@ package pkg;
 
 public class RemoveAllOcuurances {
     public static void main(String[] args) {
-        String ans = "abcdappledb";
+        String ans = "daabcbaabcbc";
         System.out.println(removeOccurrences(ans, "apple"));
     }
 
