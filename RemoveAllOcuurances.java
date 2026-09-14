@@ -7,7 +7,9 @@ public class RemoveAllOcuurances {
     }
 
     static String removeOccurrences(String s, String part) {
-        
+        while (s.contains(part)) {
+            
+        }
     }
 
 }
