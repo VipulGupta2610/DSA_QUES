@@ -8,8 +8,8 @@ public class RemoveAllOcuurances {
 
     static String removeOccurrences(String s, String part) {
         while (s.contains(part)) {
-            
+            s = new StringBuilder(s).delete(0, 0).toString();
         }
     }
-
+return s;
 }
