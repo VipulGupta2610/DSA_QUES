@@ -9,9 +9,9 @@ maxSubArray(nums);
     static void maxSubArray(int[] nums) {
         int n = nums.length;
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i; j < n-1; j++) {
+            for (int j = i; j < n; j++) {
                 for (int j2 = i; j2 <=j; j2++) {
-                    System.out.println(nums[j2]);
+                    System.out.print(nums[j2]);
                 }
                 System.out.println(" ");
             }
