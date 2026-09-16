@@ -6,16 +6,19 @@ public class kadaneAlgo {
 maxSubArray(nums);
     }
 
-    static void maxSubArray(int[] nums) {
+    static int maxSubArray(int[] nums) {
         int n = nums.length;
+        int maxSum = 0;
         for (int i = 0; i < nums.length; i++) {
+            int currentSum=0;
             for (int j = i; j < n; j++) {
-                for (int j2 = i; j2 <=j; j2++) {
-                    System.out.print(nums[j2]);
-                }
-                System.out.println(" ");
+               currentSum+=nums[j];
+               if (currentSum>maxSum){
+                maxSum=currentSum;
+               }
             }
-            System.out.println();
+            
         }
+        return maxSum;
     }
 }
