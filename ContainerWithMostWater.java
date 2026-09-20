@@ -7,6 +7,7 @@ public class ContainerWithMostWater {
         System.out.println(ans);
     }
 
+    // optimised
     static int maxAreaOp(int[] height) {
         int maxWater = 0;
         int lp = 0;
@@ -14,8 +15,13 @@ public class ContainerWithMostWater {
         while (lp < rp) {
             int wdt = rp - lp;
             int hgt = height[lp] < height[rp] ? height[lp] : height[rp];
-            int currentWater = wdt*hgt;
-            maxWater
+            int currentWater = wdt * hgt;
+            maxWater = currentWater > maxWater ? currentWater : maxWater;
+            if (height[lp] < height[rp]) {
+                lp++;
+            } else {
+                rp--;
+            }
         }
     }
 
