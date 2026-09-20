@@ -7,6 +7,10 @@ public class ContainerWithMostWater {
         System.out.println(ans);
     }
 
+
+    
+
+    // non- optimistic
     static int maxArea(int[] height) {
         int max = 0;
         for (int i = 0; i < height.length; i++) {
