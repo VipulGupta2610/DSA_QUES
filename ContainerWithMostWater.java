@@ -3,7 +3,7 @@ package pkg;
 public class ContainerWithMostWater {
     public static void main(String[] args) {
         int[] arr = { 1, 8, 6, 2, 5, 4, 8, 3, 7 };
-        int ans = maxArea(arr);
+        int ans = maxAreaOp(arr);
         System.out.println(ans);
     }
 
@@ -23,6 +23,7 @@ public class ContainerWithMostWater {
                 rp--;
             }
         }
+        return maxWater;
     }
 
     // non- optimistic
