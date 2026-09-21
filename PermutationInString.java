@@ -6,4 +6,8 @@ public class PermutationInString {
         String s2 = "a";
         System.out.println(s1.contains(s2));
     }
+
+    static boolean checkInclusion(String s1, String s2) {
+        
+    }
 }
