@@ -17,11 +17,11 @@ public class four_sum {
         for (int i = 0; i < nums.length; i++) {
             int first = nums[i];
             for (int j = i + 1; j < nums.length; j++) {
-                List<Integer> inner = new ArrayList<>();
                 int second = nums[j];
                 int l = j + 1;
                 int r = nums.length - 1;
                 while (l < r) {
+                    List<Integer> inner = new ArrayList<>();
                     int sum = first + second + nums[l] + nums[r];
                     if (sum == target) {
                         inner.add(first);
