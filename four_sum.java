@@ -22,12 +22,12 @@ public class four_sum {
                 int l = j + 1;
                 int r = nums.length - 1;
                 while (l < r) {
-                    int sum = first + second + l + r;
+                    int sum = first + second + nums[l] + nums[r];
                     if (sum == target) {
                         inner.add(first);
                         inner.add(second);
-                        inner.add(l);
-                        inner.add(r);
+                        inner.add(nums[l]);
+                        inner.add(nums[r]);
                         list.add(inner);
                         l++;
                         r--;
