@@ -1,3 +1,5 @@
+package pkg;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -26,6 +28,9 @@ public class four_sum {
                         inner.add(second);
                         inner.add(l);
                         inner.add(r);
+                        list.add(inner);
+                        l++;
+                        r--;
                     } else if (sum < target) {
                         l++;
                     }
