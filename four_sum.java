@@ -22,7 +22,7 @@ public class four_sum {
                 int r = nums.length - 1;
                 while (l < r) {
                     List<Integer> inner = new ArrayList<>();
-                    int sum = first + second + nums[l] + nums[r];
+                    long sum = (long)first + second + nums[l] + nums[r];
                     if (sum == target) {
                         inner.add(first);
                         inner.add(second);
