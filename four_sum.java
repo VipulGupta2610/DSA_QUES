@@ -28,9 +28,16 @@ public class four_sum {
                         inner.add(second);
                         inner.add(nums[l]);
                         inner.add(nums[r]);
-                        list.add(inner);
-                        l++;
-                        r--;
+                        if (list.contains(inner)){
+                            l++;
+                            r--;
+                            continue;
+                        }else{
+                            list.add(inner);
+                            l++;
+                            r--;
+
+                        }
                     } else if (sum < target) {
                         l++;
                     }
