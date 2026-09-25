@@ -39,7 +39,9 @@ public class four_sum {
                             list.add(inner);
                             l++;
                             r--;
-
+                        }
+                        while (l<r && nums[l]==nums[l-1]) {
+                            l++;
                         }
                     } else if (sum < target) {
                         l++;
