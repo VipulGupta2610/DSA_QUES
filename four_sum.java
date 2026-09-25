@@ -16,6 +16,9 @@ public class four_sum {
         List<List<Integer>> list = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
             int first = nums[i];
+            if (i>0 && first==nums[i-1]){
+                continue;
+            }
             for (int j = i + 1; j < nums.length; j++) {
                 int second = nums[j];
                 int l = j + 1;
