@@ -6,9 +6,9 @@ import java.util.List;
 
 public class four_sum {
     public static void main(String[] args) {
-        int[] arr = { 1, 0, -1, 0, -2, 2 };
-        List<List<Integer>> ans = fourSum(arr, 0);
-        System.out.println(ans);
+        int [] arr = {1,0,-1,0,-2,2};
+         List<List<Integer>> ans = fourSum(arr, 0);
+         System.out.println(ans);
     }
 
     static List<List<Integer>> fourSum(int[] nums, int target) {
@@ -16,42 +16,36 @@ public class four_sum {
         List<List<Integer>> list = new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
             int first = nums[i];
-            if (i > 0 && first == nums[i - 1]) {
-                continue;
-            }
             for (int j = i + 1; j < nums.length; j++) {
                 int second = nums[j];
                 int l = j + 1;
                 int r = nums.length - 1;
                 while (l < r) {
                     List<Integer> inner = new ArrayList<>();
-                    long sum = (long) first + second + nums[l] + nums[r];
+                    long sum = (long)first + second + nums[l] + nums[r];
                     if (sum == target) {
                         inner.add(first);
                         inner.add(second);
                         inner.add(nums[l]);
                         inner.add(nums[r]);
-                        if (list.contains(inner)) {
+                        if (list.contains(inner)){
                             l++;
                             r--;
                             continue;
-                        } else {
+                        }else{
                             list.add(inner);
                             l++;
                             r--;
-                        }
-                        while (l<r && nums[l]==nums[l-1]) {
-                            l++;
+
                         }
                     } else if (sum < target) {
                         l++;
-                    } else if (sum > target) {
+                    }
+                    else if (sum > target){
                         r--;
                     }
                 }
-                while (j<nums.length && nums[j]==nums[j-1]) {
-                    j++;
-                }
+
             }
         }
         return list;
