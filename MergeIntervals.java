@@ -24,12 +24,13 @@ public class MergeIntervals {
         for (int i = 1; i < intervals.length; i++) {
             int currentStart = intervals[i][0];
             int currentEnd = intervals[i][1];
-            if (end <= currentStart) {
+            if (currentStart <= end) {
                 end = Math.max(end, currentEnd);
+            }else{
+                list.add(new int[] { start, end });
+                start = currentStart;
+                end = currentEnd;
             }
-            list.add(new int[] { start, end });
-            start = currentStart;
-            end = currentEnd;
         }
         list.add(new int[] { start, end });
         return list.toArray(new int[list.size()][]);
