@@ -10,68 +10,30 @@ public class MergeIntervals {
                 { 8, 10 },
                 { 15, 18 }
         };
-        merge(arr);
+        int[][] ans = merge(arr);
+        for (int[] row : ans) {
+            System.out.println(Arrays.toString(row));
+        }
     }
 
-    static void merge(int[][] intervals) {
+    static int[][] merge(int[][] intervals) {
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
         int start = intervals[0][0];
         int end = intervals[0][1];
         List<int[]> list = new ArrayList<>();
-        for (int i = 0; i < intervals.length; i++) {
+        for (int i = 1; i < intervals.length; i++) {
             int currentStart = intervals[i][0];
             int currentEnd = intervals[i][1];
-            if (end<=currentStart){
+            if (end <= currentStart) {
                 end = Math.max(end, currentEnd);
             }
-            list.add(new int[]{start,end});
-            start=currentStart;
+            list.add(new int[] { start, end });
+            start = currentStart;
             end = currentEnd;
         }
+        list.add(new int[] { start, end });
+        return list.toArray(new int[list.size()][]);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     // old brute force approach
     // static void merge(int[][] intervals) {
