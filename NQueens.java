@@ -17,30 +17,33 @@ public class NQueens {
 
     static List<List<String>> nqueen(boolean[][] board, int r) {
         if (r >= board.length) {
-            List<List<String>> list = returning(board);
+           List<List<String>> list = new ArrayList<>();
+            list.add(returning(board));
             return list;
         }
         List<List<String>> list = new ArrayList<>();
         for (int c = 0; c < board.length; c++) {
             if (isSafe(board, r, c)) {
                 board[r][c] = true;
-                list = nqueen(board, r + 1);
+                list.addAll(nqueen(board, r+1));
                 board[r][c] = false;
             }
         }
         return list;
     }
 
-    static List<List<String>> returning(boolean[][] board) {
-        List<List<String>> list = new ArrayList<>();
+    static List<String> returning(boolean[][] board) {
+        List<String> list = new ArrayList<>();
         for (int i = 0; i < board.length; i++) {
-            List<String> innerList = new ArrayList<>();
+           StringBuilder innerList = new StringBuilder();
             for (int j = 0; j < board.length; j++) {
                 if (board[i][j]) {
-                    innerList.add("Q");
+                    innerList.append("Q");
+                }else{
+                    innerList.append(".");
                 }
             }
-            list.add(innerList);
+            list.add(innerList.toString());
         }
         return list;
     }
