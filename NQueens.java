@@ -1,10 +1,12 @@
 package pkg;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class NQueens {
     public static void main(String[] args) {
-
+          List<List<String>> list = solveNQueens(4);
+          System.out.println(list);
     }
 
     static List<List<String>> solveNQueens(int n) {
@@ -13,17 +15,34 @@ public class NQueens {
         return list;
     }
 
-    static List<List<String>> nqueen(boolean[][]board,int r){
-        if (r>=board.length){
-            
+    static List<List<String>> nqueen(boolean[][] board, int r) {
+        if (r >= board.length) {
+            List<List<String>> list = returning(board);
+            return list;
         }
-        for (int c = 0; c<board.length;c++){
-            if (isSafe(board, r, c)){
-                board[r][c]=true;
-                nqueen(board, r+1);
-                board[r][c]=false;
+        List<List<String>> list = new ArrayList<>();
+        for (int c = 0; c < board.length; c++) {
+            if (isSafe(board, r, c)) {
+                board[r][c] = true;
+                list = nqueen(board, r + 1);
+                board[r][c] = false;
             }
         }
+        return list;
+    }
+
+    static List<List<String>> returning(boolean[][] board) {
+        List<List<String>> list = new ArrayList<>();
+        for (int i = 0; i < board.length; i++) {
+            List<String> innerList = new ArrayList<>();
+            for (int j = 0; j < board.length; j++) {
+                if (board[i][j]) {
+                    innerList.add("Q");
+                }
+            }
+            list.add(innerList);
+        }
+        return list;
     }
 
     static boolean isSafe(boolean[][] board, int r, int c) {
