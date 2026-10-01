@@ -7,6 +7,9 @@ public class NQueens {
         
     }
     static List<List<String>> solveNQueens(int n) {
+        int[][]board = new int[n][n];
+    }
+    static boolean isSafe(){
         
     }
 }
