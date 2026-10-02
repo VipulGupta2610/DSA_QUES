@@ -11,6 +11,7 @@ public class SubSets2 {
          System.out.println(ans);
     }
 
+    // accepted 
     static List<List<Integer>> subsetsWithDup(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> outer = new ArrayList<>();
