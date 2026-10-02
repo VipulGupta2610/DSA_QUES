@@ -6,7 +6,9 @@ import java.util.List;
 
 public class SubSets2 {
     public static void main(String[] args) {
-
+        int [] arr = {1,2,2};
+         List<List<Integer>> ans = subsetsWithDup(arr);
+         System.out.println(ans);
     }
 
     static List<List<Integer>> subsetsWithDup(int[] nums) {
