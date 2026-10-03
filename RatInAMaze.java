@@ -23,11 +23,11 @@ public class RatInAMaze {
             return list;
         }
         ArrayList<String> inner = new ArrayList<>();
-        if (r<maze.length && c<maze.length &&maze[r+1][c]!=0){
-            ArrayList<String> ans = path(maze, r+1, c, p+"D");
-            inner.addAll(ans);
+        if (r<maze.length-1 && maze[r+1][c]!=0){
+            ArrayList<String> ans1 = path(maze, r+1, c, p+'D');
+            inner.addAll(ans1);
         }
-        if (c<maze.length && r<maze.length &&maze[r][c+1]!=0){
+        if (c<maze[0].length-1 && maze[r][c+1]!=0){
             ArrayList<String> ans2 = path(maze, r, c+1, p+'R');
             inner.addAll(ans2);
         }
