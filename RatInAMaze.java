@@ -18,6 +18,7 @@ public class RatInAMaze {
     }
 
     // accepted
+    // 1200 test cases passed
 
     static ArrayList<String> pathRet(int[][] maze, boolean[][] path, int r, int c, String p) {
         if (maze[r][c] == 0 || path[r][c]) {
