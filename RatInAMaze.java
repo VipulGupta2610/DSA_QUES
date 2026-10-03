@@ -18,6 +18,9 @@ public class RatInAMaze {
     }
 
     static ArrayList<String> pathRet(int [][]maze , boolean[][]path,int r , int c,String p){
+        if (maze[r][c] == 0 || path[r][c]) {
+    return new ArrayList<>();
+}
         if (r==maze.length-1 && c==maze.length-1){
             ArrayList<String> list = new ArrayList<>();
             list.add(p);
