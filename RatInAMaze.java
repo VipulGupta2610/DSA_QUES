@@ -10,13 +10,19 @@ public class RatInAMaze {
     }
 
     static ArrayList<String> ratInMaze(int[][] maze) {
-        // code here
-
-
-        
+        // code here        
     }
 
-    static ArrayList<String> path(int [][]maze){
-        
+    static ArrayList<String> path(int [][]maze,int r , int c,String p){
+        if (r==maze.length && c==maze.length){
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
+        }
+        ArrayList<String> inner = new ArrayList<>();
+        if (r<maze.length && maze[r+1][c]!=0){
+            ArrayList<String> ans = path(maze, r+1, c, p+"D");
+        }
+        if (c<maze.length )
     }
 }
