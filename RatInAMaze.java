@@ -35,6 +35,10 @@ public class RatInAMaze {
             ArrayList<String> ans1 = pathRet(maze, path, r+1, c, p+'D');
             inner.addAll(ans1);
         }
+        if (c>0 && maze[r][c-1]!=0){
+            ArrayList<String> ans4 = pathRet(maze, path, r, c-1, p+'L');
+            inner.addAll(ans4);
+        }
         if (c<maze.length-1 && maze[r][c+1]!=0){
             ArrayList<String> ans2 = pathRet(maze, path, r, c+1, p+'R');
             inner.addAll(ans2);
@@ -42,10 +46,6 @@ public class RatInAMaze {
         if (r>0 && maze[r-1][c]!=0){
             ArrayList<String> ans3 = pathRet(maze, path, r-1, c, p+'U');
             inner.addAll(ans3);
-        }
-        if (c>0 && maze[r][c-1]!=0){
-            ArrayList<String> ans4 = pathRet(maze, path, r, c-1, p+'L');
-            inner.addAll(ans4);
         }
         path[r][c]=false;
         return inner;
