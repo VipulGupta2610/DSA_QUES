@@ -12,25 +12,39 @@ public class RatInAMaze {
 
     static ArrayList<String> ratInMaze(int[][] maze) {
         // code here        
-        ArrayList<String> ans = path(maze, 0, 0, "");
+        boolean[][] path = new boolean[maze.length][maze[0].length];
+        ArrayList<String> ans = pathRet(maze,path, 0, 0, "");
         return ans;
     }
 
-    static ArrayList<String> path(int [][]maze,int r , int c,String p){
+    static ArrayList<String> pathRet(int [][]maze , boolean[][]path,int r , int c,String p){
         if (r==maze.length && c==maze.length){
             ArrayList<String> list = new ArrayList<>();
             list.add(p);
             return list;
         }
         ArrayList<String> inner = new ArrayList<>();
+        if (path[r][c]==false){
+            return new ArrayList<>();
+        }
+        path[r][c]=true;
         if (r<maze.length-1 && maze[r+1][c]!=0){
-            ArrayList<String> ans1 = path(maze, r+1, c, p+'D');
+            ArrayList<String> ans1 = pathRet(maze, path, r+1, c, p+'D');
             inner.addAll(ans1);
         }
-        if (c<maze[0].length-1 && maze[r][c+1]!=0){
-            ArrayList<String> ans2 = path(maze, r, c+1, p+'R');
+        if (c<maze.length-1 && maze[r][c+1]!=0){
+            ArrayList<String> ans2 = pathRet(maze, path, r, c+1, p+'R');
             inner.addAll(ans2);
         }
+        if (r>0 && maze[r-1][c]!=0){
+            ArrayList<String> ans3 = pathRet(maze, path, r-1, c, p+'U');
+            inner.addAll(ans3);
+        }
+        if (c>0 && maze[r][c-1]!=0){
+            ArrayList<String> ans4 = pathRet(maze, path, r, c-1, p+'L');
+            inner.addAll(ans4);
+        }
+        path[r][c]=false;
         return inner;
     }
 }
