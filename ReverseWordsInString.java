@@ -13,6 +13,7 @@ public class ReverseWordsInString {
         String revString = "";
         for (int i = arr.length-1; i >=0; i--) {
             revString+=arr[i];
+            revString+=" ";
         }
         return revString;
     }   
