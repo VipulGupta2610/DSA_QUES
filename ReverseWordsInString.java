@@ -9,11 +9,14 @@ public class ReverseWordsInString {
         System.out.println(ans);
     }
     static String reverseWords(String s) {
+        System.out.println(s);
         String [] arr =  s.split(" ");
         String revString = "";
         for (int i = arr.length-1; i >=0; i--) {
             revString+=arr[i];
-            revString+=" ";
+            if (i!=0){
+                revString+=" ";
+            }
         }
         return revString;
     }   
