@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class ReverseWordsInString {
     public static void main(String[] args) {
         String s = "This is testing string containing spaces";
-        String [] array = s.split(" ");
-        System.out.println(Arrays.toString(array));
+        String ans = reverseWords(s);
+        System.out.println(ans);
     }
     static String reverseWords(String s) {
         String [] arr =  s.split(" ");
