@@ -9,6 +9,7 @@ public class ReverseWordsInString {
         String ans = reverseWords(s2);
         System.out.println(ans+" hello");
     }
+    // accpetd
     static String reverseWords(String s) {
         System.out.println(s);
         s = s.strip();
