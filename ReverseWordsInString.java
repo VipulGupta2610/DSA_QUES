@@ -13,7 +13,7 @@ public class ReverseWordsInString {
         System.out.println(s);
         s = s.strip();
         System.out.println(s+"this is end");
-        String [] arr =  s.split(" ");
+        String [] arr =  s.trim().split("\\s+");
         System.out.println(Arrays.toString(arr));
         String revString = "";
         for (int i = arr.length-1; i >=0; i--) {
