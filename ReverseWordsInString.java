@@ -11,18 +11,14 @@ public class ReverseWordsInString {
     }
     // accpetd
     static String reverseWords(String s) {
-        System.out.println(s);
-        s = s.strip();
-        System.out.println(s+"this is end");
-        String [] arr =  s.trim().split("\\s+");
-        System.out.println(Arrays.toString(arr));
-        String revString = "";
+        String [] arr =  s.strip().split("\\s+");
+        StringBuilder revString = new StringBuilder();
         for (int i = arr.length-1; i >=0; i--) {
-            revString+=arr[i];
+            revString.append(arr[i]);
             if (i!=0){
-                revString+=" ";
+                revString.append(" ");
             }
         }
-        return revString;
+        return revString.toString();
     }   
 }
