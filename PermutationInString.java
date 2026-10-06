@@ -26,6 +26,7 @@ public class PermutationInString {
             }
             list = local;
         }
+        System.out.println(list);
         for (String test : list) {
             if (s2.contains(test)) {
                 return true;
