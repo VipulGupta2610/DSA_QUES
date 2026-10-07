@@ -13,11 +13,13 @@ public class PermutationInString {
 
         int []freq = new int[26];
 
-        for (char ch : s2.toCharArray()){
+        for (char ch : s1.toCharArray()){
             freq[ch-'a']++;
         }
 
-        System.out.println(Arrays.toString(freq));
+        int windSze = s1.length();
+
+        
 
         return false;
     }
