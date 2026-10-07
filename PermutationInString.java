@@ -24,7 +24,7 @@ public class PermutationInString {
             int idx = i;
             int windIdx = 0;
             while (windIdx<windSze && idx<s2.length()) {
-                windFreq[s2.charAt(windIdx)-'a']++;
+                windFreq[s2.charAt(idx)-'a']++;
                 windIdx++;
                 idx++;
             }
