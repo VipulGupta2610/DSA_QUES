@@ -9,6 +9,8 @@ public class PermutationInString {
         System.out.println(ans);
     }
 
+// accepted
+
     static boolean checkInclusion(String s1, String s2) {
 
         int []freq = new int[26];
