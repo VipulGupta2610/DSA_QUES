@@ -1,6 +1,7 @@
 package pkg;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class PermutationInString {
     public static void main(String[] args) {
@@ -13,8 +14,10 @@ public class PermutationInString {
         int []freq = new int[26];
 
         for (char ch : s2.toCharArray()){
-            
+            freq[ch-'a']++;
         }
+
+        System.out.println(Arrays.toString(freq));
 
         return false;
     }
