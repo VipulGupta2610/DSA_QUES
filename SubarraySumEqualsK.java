@@ -7,18 +7,33 @@ public class SubarraySumEqualsK {
         int ans = subarraySum(arr, k);
         System.out.println(ans);
     }
-    // got rejection
-    static int subarraySum(int[] nums, int k) {
-        int totalSubSet = 0;
-        int currSum= 0;
+
+    static int subarraySum(int []nums,int k){
+        int totalSubSet=0;
+        int currSum;
         for (int i = 0; i < nums.length; i++) {
-            if (currSum+nums[i]==k || nums[i]==k){
-                totalSubSet+=1;
-                currSum=0;
+            if (nums[i]==k){
+                continue;
             }
-                currSum+=nums[i];
-            
+            for (int j = 0; j < nums.length; j++) {
+                
+            }
         }
         return totalSubSet;
     }
+
+    // got rejection
+    // static int subarraySum(int[] nums, int k) {
+    //     int totalSubSet = 0;
+    //     int currSum= 0;
+    //     for (int i = 0; i < nums.length; i++) {
+    //         if (currSum+nums[i]==k || nums[i]==k){
+    //             totalSubSet+=1;
+    //             currSum=0;
+    //         }
+    //             currSum+=nums[i];
+            
+    //     }
+    //     return totalSubSet;
+    // }
 }
