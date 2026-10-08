@@ -3,7 +3,7 @@ package pkg;
 public class SubarraySumEqualsK {
     public static void main(String[] args) {
         int []arr= {1,1,1};
-        int k = 3;
+        int k = 2;
         int ans = subarraySum(arr, k);
         System.out.println(ans);
     }
