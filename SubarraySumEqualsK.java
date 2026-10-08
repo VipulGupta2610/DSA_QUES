@@ -14,9 +14,9 @@ public class SubarraySumEqualsK {
             if (currSum+nums[i]==k){
                 totalSubSet+=1;
                 currSum=0;
-            }else{
-                currSum+=nums[i];
             }
+                currSum+=nums[i];
+            
         }
         return totalSubSet;
     }
