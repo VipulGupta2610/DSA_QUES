@@ -7,7 +7,7 @@ public class SubarraySumEqualsK {
         int ans = subarraySum(arr, k);
         System.out.println(ans);
     }
-    // got rejectino
+    // got rejection
     static int subarraySum(int[] nums, int k) {
         int totalSubSet = 0;
         int currSum= 0;
