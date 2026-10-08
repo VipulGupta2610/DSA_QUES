@@ -13,10 +13,17 @@ public class SubarraySumEqualsK {
         int currSum;
         for (int i = 0; i < nums.length; i++) {
             if (nums[i]==k){
+                totalSubSet+=1;
                 continue;
             }
             for (int j = 0; j < nums.length; j++) {
-                
+                if (currSum+nums[i]==k){
+                    totalSubSet+=1;
+                    
+                }
+                if (currSum+nums[i]>k){
+                    break;
+                }
             }
         }
         return totalSubSet;
