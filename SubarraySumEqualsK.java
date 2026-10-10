@@ -7,7 +7,9 @@ public class SubarraySumEqualsK {
     }
 
 
-
+    static int subarraySum(int []nums,int k){
+        
+    }
 
     // static int subarraySum(int[] nums, int k) {
     //     int totalSub = 0;
