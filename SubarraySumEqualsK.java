@@ -1,6 +1,7 @@
 package pkg;
 
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class SubarraySumEqualsK {
     public static void main(String[] args) {
@@ -12,9 +13,14 @@ public class SubarraySumEqualsK {
         int count = 0;
         int [] prefixSums = new int[nums.length];
         prefixSums[0]=nums[0];
+        HashMap<Integer,Integer> map = new HashMap<>();
         for (int i = 1; i < nums.length; i++) {
             prefixSums[i]=nums[i]+prefixSums[i-1];
+            if (map.containsKey(k-prefixSums[i])){
+                count+=map.
+            }
         }
+
         System.out.println(Arrays.toString(prefixSums));
         return count;
     }
