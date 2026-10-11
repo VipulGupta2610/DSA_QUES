@@ -9,29 +9,29 @@ public class SubarraySumEqualsK {
         System.out.println(subarraySum(arr, 3));
     }
 
-    static int subarraySum(int[]nums,int k){
+    static int subarraySum(int[] nums, int k) {
         int count = 0;
-        int [] prefixSums = new int[nums.length];
-        prefixSums[0]=nums[0];
-        HashMap<Integer,Integer> map = new HashMap<>();
+        int[] prefixSums = new int[nums.length];
+        prefixSums[0] = nums[0];
+        HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 1; i < nums.length; i++) {
-            prefixSums[i]=nums[i]+prefixSums[i-1];
-            if (map.containsKey(prefixSums[i]-k)){
-                count+=map.get(prefixSums[i]-k);
-            }
-            map.put(prefixSums[i],map.getOrDefault(prefixSums[i], 0)+1);
+            prefixSums[i] = nums[i] + prefixSums[i - 1];
+        }
+
+        for (int j = 0; j < prefixSums.length; j++) {
+            if (prefixSums)
         }
 
         System.out.println(Arrays.toString(prefixSums));
         return count;
     }
-    
+
     // static int subarraySum(int[] nums, int k) {
-        // int totalSub = 0;
-        // for (int i = 0; i < nums.length; i++) {
-            // int sum = 0;
-            // for (int j = i; j < nums.length; j++) {
-                // if (sum+nums[j]==k){
+    // int totalSub = 0;
+    // for (int i = 0; i < nums.length; i++) {
+    // int sum = 0;
+    // for (int j = i; j < nums.length; j++) {
+    // if (sum+nums[j]==k){
     // totalSub+=1;
     // }
     // sum+=nums[j];
@@ -39,25 +39,25 @@ public class SubarraySumEqualsK {
     // }
     // return totalSub;
     // }
-    
+
     // static int subarraySum(int[] nums, int k) {
-    //     int totalSubArr = 0;
-    //     int start = 0;
-    //     int end = nums.length - 1;
-    //     while (start < end) {
-    //         int mid = start + (end - start)/2;
-    //         if (nums[mid] == k) {
-    //             totalSubArr += 1;
-    //             System.out.println(nums[mid]);
-    //         } 
-    //         if (k<nums[mid]){
-    //             end = mid-1;
-    //         }else if (k>nums[mid]){
-    //             start = mid+1;
-    //         }else{
-    //             mid++;
-    //         }
-    //     }
-    //     return totalSubArr;
+    // int totalSubArr = 0;
+    // int start = 0;
+    // int end = nums.length - 1;
+    // while (start < end) {
+    // int mid = start + (end - start)/2;
+    // if (nums[mid] == k) {
+    // totalSubArr += 1;
+    // System.out.println(nums[mid]);
+    // }
+    // if (k<nums[mid]){
+    // end = mid-1;
+    // }else if (k>nums[mid]){
+    // start = mid+1;
+    // }else{
+    // mid++;
+    // }
+    // }
+    // return totalSubArr;
     // }
 }
