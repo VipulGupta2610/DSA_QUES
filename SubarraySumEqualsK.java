@@ -33,8 +33,6 @@ public class SubarraySumEqualsK {
             }
             map.put(prefixSums[j], map.getOrDefault(prefixSums[j], 0)+1);
         }
-
-        System.out.println(Arrays.toString(prefixSums));
         return count;
     }
 
