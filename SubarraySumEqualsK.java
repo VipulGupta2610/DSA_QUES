@@ -16,9 +16,10 @@ public class SubarraySumEqualsK {
         HashMap<Integer,Integer> map = new HashMap<>();
         for (int i = 1; i < nums.length; i++) {
             prefixSums[i]=nums[i]+prefixSums[i-1];
-            if (map.containsKey(k-prefixSums[i])){
-                count+=map.
+            if (map.containsKey(prefixSums[i]-k)){
+                count+=map.get(prefixSums[i]-k);
             }
+            map.put(prefixSums[i],map.getOrDefault(prefixSums[i], 0)+1);
         }
 
         System.out.println(Arrays.toString(prefixSums));
