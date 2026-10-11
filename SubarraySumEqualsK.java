@@ -1,5 +1,7 @@
 package pkg;
 
+import java.util.Arrays;
+
 public class SubarraySumEqualsK {
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3 };
@@ -8,7 +10,13 @@ public class SubarraySumEqualsK {
 
     static int subarraySum(int[]nums,int k){
         int count = 0;
-        int [] prefixSums = [nums.length];
+        int [] prefixSums = new int[nums.length];
+        prefixSums[0]=nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            prefixSums[i]=nums[i]+prefixSums[i-1];
+        }
+        System.out.println(Arrays.toString(prefixSums));
+        return count;
     }
     
     // static int subarraySum(int[] nums, int k) {
