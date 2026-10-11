@@ -9,6 +9,7 @@ public class SubarraySumEqualsK {
         System.out.println(subarraySum(arr, 3));
     }
 
+    // accepted
     static int subarraySum(int[] nums, int k) {
         int count = 0;
         int[] prefixSums = new int[nums.length];
