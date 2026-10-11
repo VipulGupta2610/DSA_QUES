@@ -7,7 +7,8 @@ public class SubarraySumEqualsK {
     }
 
     static int subarraySum(int[]nums,int k){
-        
+        int count = 0;
+        int [] prefixSums = [nums.length];
     }
     
     // static int subarraySum(int[] nums, int k) {
