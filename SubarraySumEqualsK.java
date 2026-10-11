@@ -19,7 +19,18 @@ public class SubarraySumEqualsK {
         }
 
         for (int j = 0; j < prefixSums.length; j++) {
-            if (prefixSums)
+            if (prefixSums[j]==k){
+                count++;
+            }
+            int val = prefixSums[j]-k;
+            if (map.containsKey(val)){
+                int ans = map.get(val);
+                count+=ans;
+            }
+            if (!map.containsKey(prefixSums[j])){
+                map.put(prefixSums[j],0);
+            }
+            map.put(prefixSums[j], map.getOrDefault(prefixSums[j], 0)+1);
         }
 
         System.out.println(Arrays.toString(prefixSums));
