@@ -10,9 +10,13 @@ public class SlidingWindowMax {
         for (int i = 0; i < ans.length-k; i++) {
             int max = nums[i];
             for (int j = i; j < i+k; j++) {
-                
+                if (nums[j]>max ){
+                    max = nums[j];
+                }
             }
+            ans[i]=max;
         }
+        return ans ;
     }
 
 }
