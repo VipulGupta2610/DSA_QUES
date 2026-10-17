@@ -13,6 +13,8 @@ public class SetMatrixZeroes {
         setZeroes(matrix);
     }
 
+// accepted
+
     static void setZeroes(int[][] matrix) {
 
         boolean[][] mat = new boolean[matrix.length][matrix[0].length];
