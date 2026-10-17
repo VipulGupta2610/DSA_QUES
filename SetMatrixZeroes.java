@@ -31,13 +31,21 @@ public class SetMatrixZeroes {
                     int row = i;
                     int col = j;
 
-                    
-
+                    while (row>=0) {
+                        matrix[row][col]=0;
+                        row--;
+                    }
+                    row+=1;
                     while (row<mat.length){
                         matrix[row][col]=0;
                         row++;
                     }
                     row -=1;
+                    while (col>=0) {
+                        matrix[row][col]=0;
+                        col--;
+                    }
+                    col+=1;
                     while (col<mat[0].length){
                         matrix[row][col]=0;
                         col++;
@@ -47,7 +55,9 @@ public class SetMatrixZeroes {
         }
 
         System.out.println(Arrays.deepToString(mat));
-        System.out.println(Arrays.deepToString(matrix));
+        for (int [] arr : matrix){
+            System.out.println(Arrays.toString(arr));
+        }
     }
 
 }
