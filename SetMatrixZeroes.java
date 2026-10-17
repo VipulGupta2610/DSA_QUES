@@ -30,10 +30,14 @@ public class SetMatrixZeroes {
                 if (mat[i][j] == false) {
                     int row = i;
                     int col = j;
+
+                    
+
                     while (row<mat.length){
                         matrix[row][col]=0;
                         row++;
                     }
+                    row -=1;
                     while (col<mat[0].length){
                         matrix[row][col]=0;
                         col++;
