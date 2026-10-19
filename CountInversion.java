@@ -15,7 +15,7 @@ public class CountInversion {
             long first = nums[i];
             for (int j = i + 1; j < nums.length; j++) {
                 long second = nums[j];
-                if (first > (2 * second)) {
+                if (first >  second) {
                     count++;
                 }
             }
