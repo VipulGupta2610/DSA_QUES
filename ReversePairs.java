@@ -6,6 +6,8 @@ public class ReversePairs {
         int ans = reversePairs(arr);
         System.out.println(ans);
     }
+
+// brute force
     static  int reversePairs(int[] nums) {
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
