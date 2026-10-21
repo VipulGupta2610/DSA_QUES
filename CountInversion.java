@@ -27,7 +27,13 @@ public class CountInversion {
     }
 
     static int merge(int []arr , int start,int mid, int end){
-        
+        int n1 = mid-start+1;
+        int n2 = end - mid;
+        int []left = new int[n1];
+        int[] right = new int[n2];
+        for (int i = ; i < right.length; i++) {
+            
+        } 
     }
 
     // brute force
