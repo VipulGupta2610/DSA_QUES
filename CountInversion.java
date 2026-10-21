@@ -16,7 +16,8 @@ public class CountInversion {
 
     static int mergeSort(int []arr , int start , int end){
         int count=0;
-
+        int mid = start + (end - start )/2;
+        
         return count;
     }
 
