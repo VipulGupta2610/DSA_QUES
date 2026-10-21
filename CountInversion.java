@@ -14,11 +14,11 @@ public class CountInversion {
         return mergeSort(nums,0,n);
     }
 
-    static int mergeSort(int []arr , int start , int end){
-        int count=0;
-        
-        return count;
-    }
+    // static int mergeSort(int []arr , int start , int end){
+    //     int count=0;
+
+    //     return count;
+    // }
 
     // brute force
     // static int countInversions(int[] nums) {
