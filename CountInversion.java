@@ -14,20 +14,20 @@ public class CountInversion {
         return mergeSort(nums,0,n);
     }
 
-    // static int mergeSort(int []arr , int start , int end){
-    //     int count=0;
-    //     if (start<end){
-    //         int mid = start + (end - start )/2;
-    //         int mg1 = mergeSort(arr, start, mid);
-    //         int mg2 = mergeSort(arr, mid+1, end);
-    //         int mrg = merge(arr,start,mid,end);
-    //         count = mg1+mg2+mrg;
-    //     }
-    //     return count;
-    // }
+    static int mergeSort(int []arr , int start , int end){
+        int count=0;
+        if (start<end){
+            int mid = start + (end - start )/2;
+            int mg1 = mergeSort(arr, start, mid);
+            int mg2 = mergeSort(arr, mid+1, end);
+            int mrg = merge(arr,start,mid,end);
+            count = mg1+mg2+mrg;
+        }
+        return count;
+    }
 
     static int merge(int []arr , int start,int mid, int end){
-
+        
     }
 
     // brute force
