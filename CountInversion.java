@@ -9,6 +9,7 @@ public class CountInversion {
         System.out.println(ans);
     }
 
+    // brute force
     static int countInversions(int[] nums) {
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
