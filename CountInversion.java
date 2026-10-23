@@ -41,6 +41,7 @@ public class CountInversion {
             right[i] = arr[righti];
             righti++;
         } 
+        int i = 0 , j=0 , k=start , count=0;
     }
 
     // brute force
