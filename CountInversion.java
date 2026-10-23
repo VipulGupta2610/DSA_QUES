@@ -47,7 +47,7 @@ public class CountInversion {
                 arr[k++]=left[i++];
             }else{
                 arr[k++]=right[j++];
-                count++;
+                count+= (n1 - i);
             }
         }
         while (i<n1) {
