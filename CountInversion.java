@@ -42,6 +42,21 @@ public class CountInversion {
             righti++;
         } 
         int i = 0 , j=0 , k=start , count=0;
+        while (i<n1 && j<n2) {
+            if (left[i]<=right[j]){
+                arr[k++]=left[i++];
+            }else{
+                arr[k++]=right[j++];
+                count++;
+            }
+        }
+        while (i<n1) {
+            arr[k++]=left[i++];
+        }
+        while (j<n2) {
+            arr[k++]=right[j++];
+        }
+        return count;
     }
 
     // brute force
