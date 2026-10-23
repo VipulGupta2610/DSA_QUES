@@ -31,8 +31,15 @@ public class CountInversion {
         int n2 = end - mid;
         int []left = new int[n1];
         int[] right = new int[n2];
-        for (int i = ; i < right.length; i++) {
-            
+        int lefti = start;
+        int righti = mid+1;
+        for (int i = 0; i <left.length; i++) {
+            left[i] = arr[lefti];
+            lefti++;
+        } 
+        for (int i = 0; i < right.length; i++) {
+            right[i] = arr[lefti];
+            lefti++;
         } 
     }
 
