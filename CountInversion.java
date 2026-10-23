@@ -38,8 +38,8 @@ public class CountInversion {
             lefti++;
         } 
         for (int i = 0; i < right.length; i++) {
-            right[i] = arr[lefti];
-            lefti++;
+            right[i] = arr[righti];
+            righti++;
         } 
     }
 
