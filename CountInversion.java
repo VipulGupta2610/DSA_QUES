@@ -9,8 +9,8 @@ public class CountInversion {
         System.out.println(ans);
     }
 
-    static int countInversions(int[] nums) {
-        int n = nums.length-1;
+    static int countInversions(List<Integer> arr) {
+        int n = arr.;
         return mergeSort(nums,0,n);
     }
 
