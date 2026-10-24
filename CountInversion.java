@@ -4,7 +4,6 @@ import java.util.List;
 
 public class CountInversion {
     public static void main(String[] args) {
-        int[] arr = { 2, 4, 1, 3, 5 };
         List<Integer> list = List.of(2,4,1,3,5);
         int ans = countInversions(list);
         System.out.println(ans);
