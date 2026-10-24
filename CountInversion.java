@@ -5,12 +5,14 @@ import java.util.List;
 public class CountInversion {
     public static void main(String[] args) {
         int[] arr = { 2, 4, 1, 3, 5 };
-        int ans = countInversions(arr);
+        List<Integer> list = List.of(2,4,1,3,5);
+        int ans = countInversions(list);
         System.out.println(ans);
     }
 
     static int countInversions(List<Integer> arr) {
-        int n = arr.;
+        int n = arr.size()-1;
+        int[] nums = arr.stream().mapToInt(Integer::intValue).toArray();
         return mergeSort(nums,0,n);
     }
 
