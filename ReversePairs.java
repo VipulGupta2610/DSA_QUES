@@ -7,7 +7,6 @@ public class ReversePairs {
         System.out.println(ans);
     }
 
-// brute force
     static  int reversePairs(int[] nums) {
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -21,4 +20,18 @@ public class ReversePairs {
         }
         return count;
     }
+    // brute force
+    // static  int reversePairs(int[] nums) {
+    //     int count = 0;
+    //     for (int i = 0; i < nums.length; i++) {
+    //         long first = nums[i];
+    //         for (int j = i+1; j < nums.length; j++) {
+    //             long second = nums[j];
+    //             if (first > (2*second)){
+    //                 count++;
+    //             }
+    //         }
+    //     }
+    //     return count;
+    // }
 }
