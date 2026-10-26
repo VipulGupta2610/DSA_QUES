@@ -42,11 +42,11 @@ public class ReversePairs {
         int[] left = new int[n1];
         int[] right = new int[n2];
 
-        for (int i = 0; i < n1; i++) {
+        for ( i = 0; i < n1; i++) {
             left[i] = arr[start + i];
         }
 
-        for (int i = 0; i < n2; i++) {
+        for ( i = 0; i < n2; i++) {
             right[i] = arr[mid + 1 + i];
         }
 
