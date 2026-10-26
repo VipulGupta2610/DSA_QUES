@@ -2,7 +2,7 @@ package pkg;
 
 public class ReversePairs {
     public static void main(String[] args) {
-        int[] arr = { 1,3,2,3,1 };
+        int[] arr = { 1, 3, 2, 3, 1 };
         int ans = reversePairs(arr);
         System.out.println(ans);
     }
@@ -32,7 +32,12 @@ public class ReversePairs {
         int n2 = end - mid;
         int i = 0, j = 0, k = start;
 
-        
+        for (i = start; i <= mid; i++) {
+            while (j <= end && (long) arr[i] > 2L * arr[j]) {
+                j++;
+            }
+            count += j - (mid + 1);
+        }
 
         int[] left = new int[n1];
         int[] right = new int[n2];
@@ -45,12 +50,11 @@ public class ReversePairs {
             right[i] = arr[mid + 1 + i];
         }
 
-
         while (i < n1 && j < n2) {
             if (left[i] <= right[j]) {
                 arr[k++] = left[i++];
             } else {
-                if (left[i]>(2*right[j])){
+                if (left[i] > (2 * right[j])) {
                     count += n1 - i;
                 }
                 arr[k++] = right[j++];
