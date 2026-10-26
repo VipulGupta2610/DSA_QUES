@@ -27,6 +27,7 @@ public class ReversePairs {
     }
 
     static int merge(int[] arr, int start, int mid, int end) {
+        int count = 0;
         int n1 = mid - start + 1;
         int n2 = end - mid;
         int[] left = new int[n1];
@@ -41,7 +42,6 @@ public class ReversePairs {
         }
 
         int i = 0, j = 0, k = start;
-        int count = 0;
 
         while (i < n1 && j < n2) {
             if (left[i] <= right[j]) {
