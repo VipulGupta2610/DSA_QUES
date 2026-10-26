@@ -30,6 +30,10 @@ public class ReversePairs {
         int count = 0;
         int n1 = mid - start + 1;
         int n2 = end - mid;
+        int i = 0, j = 0, k = start;
+
+        
+
         int[] left = new int[n1];
         int[] right = new int[n2];
 
@@ -41,7 +45,6 @@ public class ReversePairs {
             right[i] = arr[mid + 1 + i];
         }
 
-        int i = 0, j = 0, k = start;
 
         while (i < n1 && j < n2) {
             if (left[i] <= right[j]) {
