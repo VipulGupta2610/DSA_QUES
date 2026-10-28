@@ -9,8 +9,8 @@ public class PaintersProblem {
     }
 
     static int minTime(int[]arr , int k){
-        int start = sum(arr);
-        int end = maxv(arr);
+        int start = maxv(arr);
+        int end = sum(arr);
 
         int result=-1;
         
@@ -34,7 +34,7 @@ public class PaintersProblem {
             if (arr[i]>maxTimeAllowed){
                 return false;
             }
-            if (currentTime+arr[i]<maxTimeAllowed){
+            if (currentTime+arr[i]<=maxTimeAllowed){
                 currentTime+=arr[i];
             }else{
                 requiredPainters++;
