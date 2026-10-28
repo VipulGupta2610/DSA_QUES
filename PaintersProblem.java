@@ -31,7 +31,14 @@ public class PaintersProblem {
             if (arr[i]>maxTimeAllowed){
                 return false;
             }
+            if (currentTime+arr[i]<maxTimeAllowed){
+                currentTime+=arr[i];
+            }else{
+                requiredPainters++;
+                currentTime=arr[i];
+            }
         } 
+        return (requiredPainters<=k);
     }
 
     static int maxv(int[]arr){
