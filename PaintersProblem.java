@@ -24,8 +24,14 @@ public class PaintersProblem {
 
     }
 
-    static boolean isValid(int[]arr,int k,int mid){
-        
+    static boolean isValid(int[]arr,int k,int maxTimeAllowed){
+        int requiredPainters =1;
+        int currentTime=0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]>maxTimeAllowed){
+                return false;
+            }
+        } 
     }
 
     static int maxv(int[]arr){
