@@ -6,6 +6,10 @@ public class PaintersProblem {
     }
 
     static int minTime(int[]arr , int k){
+        int end = sum(arr);
+    }
+
+    static int sum(int []arr){
         
     }
 
