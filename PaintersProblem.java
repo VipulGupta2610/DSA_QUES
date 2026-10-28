@@ -2,7 +2,10 @@ package pkg;
 
 public class PaintersProblem {
     public static void main(String[] args) {
-        
+        int[]arr = {10, 30, 20, 40};
+        int k =2;
+        int ans = minTime(arr, k);
+        System.out.println(ans);
     }
 
     static int minTime(int[]arr , int k){
