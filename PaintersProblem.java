@@ -12,9 +12,20 @@ public class PaintersProblem {
         int result=-1;
         
         while (start<=end) {
-            int mid 
+            int mid = start+(end -start)/2;
+            if (isValid(arr,k,mid)){
+                result=mid;
+                end = mid-1;
+            }else{
+                start = mid+1;
+            }
         }
+        return result;
 
+    }
+
+    static boolean isValid(int[]arr,int k,int mid){
+        
     }
 
     static int maxv(int[]arr){
