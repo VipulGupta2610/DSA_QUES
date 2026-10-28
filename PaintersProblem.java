@@ -5,4 +5,8 @@ public class PaintersProblem {
         
     }
 
+    static int minTime(int[]arr , int k){
+        
+    }
+
 }
