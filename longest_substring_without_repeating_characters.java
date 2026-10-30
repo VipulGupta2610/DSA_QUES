@@ -10,6 +10,9 @@ public class longest_substring_without_repeating_characters {
         System.out.println(ans);
     }
 
+
+    // optimised try
+
     // brute force
     static int lengthOfLongestSubstring(String s) {
         int longestLen = 0;
