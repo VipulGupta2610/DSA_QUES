@@ -12,9 +12,9 @@ public class longest_substring_without_repeating_characters {
 
 
     // optimised try
-    static int lengthOfLongestSubstring(String s){
-        
-    }
+    // static int lengthOfLongestSubstring(String s){
+
+    // }
 
     // brute force
     // static int lengthOfLongestSubstring(String s) {
