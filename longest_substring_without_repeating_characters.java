@@ -5,7 +5,7 @@ import java.util.HashSet;
 
 public class longest_substring_without_repeating_characters {
     public static void main(String[] args) {
-        String str = "bbbbb";
+        String str = "pwwkew";
         int ans = lengthOfLongestSubstring(str);
         System.out.println(ans);
     }
