@@ -22,9 +22,11 @@ public class longest_substring_without_repeating_characters {
                 longestLen = Math.max(longestLen, j-i+1);
                 j++;
             }else{
-                
+                set.remove(s.charAt(i));
+                i++;
             }
         }
+        return longestLen;
     }
 
     // brute force
