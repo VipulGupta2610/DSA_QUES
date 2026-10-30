@@ -16,6 +16,7 @@ public class longest_substring_without_repeating_characters {
         int longestLen=0;
         int i = 0;
         int j=i+1;
+        HashSet<Character> set = new HashSet<>();
         while (j<s.length()) {
             char first = s.charAt(i);
             if (first.charAt(j))
