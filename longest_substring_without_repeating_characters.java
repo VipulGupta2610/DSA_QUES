@@ -12,7 +12,19 @@ public class longest_substring_without_repeating_characters {
 
     // optimised try
     static int lengthOfLongestSubstring(String s){
-
+        int longestLen=0;
+        int i = 0;
+        int j = 0;
+        HashSet<Character> set = new HashSet<>();
+        while (j<s.length()) {
+            if (!set.contains(s.charAt(j))){
+                set.add(s.charAt(j));
+                longestLen = Math.max(longestLen, j-i+1);
+                j++;
+            }else{
+                
+            }
+        }
     }
 
     // brute force
