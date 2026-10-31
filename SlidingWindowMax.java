@@ -1,5 +1,6 @@
 package pkg;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class SlidingWindowMax {
@@ -13,7 +14,20 @@ public class SlidingWindowMax {
     // optimised
     static int[] maxSlidingWindow(int[] nums, int k) {
         int[] ans = new int[nums.length - k + 1];
-
+        int arrIdx = 0;
+        // ArrayList<Integer> list = new ArrayList<>();
+        int i = 0;
+        int j = i+k;
+        int prevLargest = nums[i];
+        while (j<nums.length-k) {
+            int currentIdx = i;
+            if (nums[currentIdx]>prevLargest){
+                prevLargest=nums[currentIdx];
+            }
+            ans[arrIdx]=prevLargest;
+            arrIdx++;
+        }
+        // Ine []ans = list.toArray(Integer[]::new);
         return ans;
     }
 
