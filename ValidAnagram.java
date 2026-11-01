@@ -1,5 +1,7 @@
 package pkg;
 
+import java.util.HashMap;
+
 public class ValidAnagram {
 
     public static void main(String[] args) {
@@ -9,6 +11,10 @@ public class ValidAnagram {
     }
 
     static boolean isAnagram(String s, String t) {
+        HashMap<Character,Integer> s1 = new HashMap<>();
+        HashMap<Character,Integer> s2 = new HashMap<>();
+
+        
 
     }
 
