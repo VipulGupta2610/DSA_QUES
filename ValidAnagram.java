@@ -21,7 +21,11 @@ public class ValidAnagram {
             s2.put(second, s2.getOrDefault(second, 0) - 1);
         }
 
-        
+        for (int count : s2.values()){
+            if (count!=0){
+                return false;
+            }
+        }
 
         return true;
 
