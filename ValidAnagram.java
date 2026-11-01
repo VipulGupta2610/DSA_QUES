@@ -11,10 +11,19 @@ public class ValidAnagram {
     }
 
     static boolean isAnagram(String s, String t) {
-        HashMap<Character,Integer> s1 = new HashMap<>();
-        HashMap<Character,Integer> s2 = new HashMap<>();
+
+        HashMap<Character, Integer> s2 = new HashMap<>();
+
+        for (int i = 0; i < s.length(); i++) {
+            char first = s.charAt(i);
+            char second = t.charAt(i);
+            s2.put(first, s2.getOrDefault(first, 0) + 1);
+            s2.put(second, s2.getOrDefault(second, 0) - 1);
+        }
 
         
+
+        return true;
 
     }
 
