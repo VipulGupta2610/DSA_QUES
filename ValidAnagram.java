@@ -8,22 +8,24 @@ public class ValidAnagram {
         System.out.println(isAnagram(s, t));
     }
 
-    
-
-// brute force 
     static boolean isAnagram(String s, String t) {
-        boolean unique = true;
-        int count = 0;
-        char[] sArr = s.toCharArray();
-        char[] tArr = t.toCharArray();
-        for (char chr : sArr) {
-            for (int i = 0; i < tArr.length; i++) {
-                count ^= chr^tArr[i];
-            }
-        }
-        if (count != 0){
-            return true;
-        }
-        return false;
+
     }
+
+    // brute force
+    // static boolean isAnagram(String s, String t) {
+    // boolean unique = true;
+    // int count = 0;
+    // char[] sArr = s.toCharArray();
+    // char[] tArr = t.toCharArray();
+    // for (char chr : sArr) {
+    // for (int i = 0; i < tArr.length; i++) {
+    // count ^= chr^tArr[i];
+    // }
+    // }
+    // if (count != 0){
+    // return true;
+    // }
+    // return false;
+    // }
 }
