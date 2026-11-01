@@ -12,6 +12,10 @@ public class ValidAnagram {
 
     static boolean isAnagram(String s, String t) {
 
+        if (s.length()!=t.length()){
+            return false;
+        }
+
         HashMap<Character, Integer> s2 = new HashMap<>();
 
         for (int i = 0; i < s.length(); i++) {
