@@ -25,6 +25,8 @@ public class SlidingWindowMax {
                 prevLargest=nums[currentIdx];
             }
             ans[arrIdx]=prevLargest;
+            i++;
+            j++;
             arrIdx++;
         }
         // Ine []ans = list.toArray(Integer[]::new);

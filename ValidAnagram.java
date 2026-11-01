@@ -8,6 +8,9 @@ public class ValidAnagram {
         System.out.println(isAnagram(s, t));
     }
 
+    
+
+// brute force 
     static boolean isAnagram(String s, String t) {
         boolean unique = true;
         int count = 0;
