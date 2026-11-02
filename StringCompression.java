@@ -2,7 +2,7 @@ package pkg;
 
 public class StringCompression {
     public static void main(String[] args) {
-        char[] arr = {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
+        char[] arr = {'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'};
         int ans = compress(arr);
         System.out.println(ans);
     }
