@@ -1,5 +1,7 @@
 package pkg;
 
+import java.util.HashMap;
+
 public class StringCompression {
     public static void main(String[] args) {
         char[] arr = { 'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b' };
@@ -8,7 +10,15 @@ public class StringCompression {
     }
 
     static int compress(char[] chars) {
-
+        StringBuilder str = new StringBuilder();
+        HashMap<Character,Integer> map = new HashMap<>();
+        for (int i = 0; i < chars.length; i++) {
+            if (map.containsKey(chars[i])){
+                 map.put(chars[i], map.getOrDefault(chars[i], 0) + 1);
+            }else{
+                map.put(chars[i], 1);
+            }
+        }
     }
 
     // brute force
