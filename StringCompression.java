@@ -19,6 +19,9 @@ public class StringCompression {
                 map.put(chars[i], 1);
             }
         }
+        for (int count : map.values()){
+            str.append(count)
+        }
     }
 
     // brute force
