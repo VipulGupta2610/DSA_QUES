@@ -8,7 +8,7 @@ public class StringCompression {
     }
 
     // brute force
-    static int compress(char[] chars) {
+    static int compress(char[] chars) {  
         String s = "";
         for (int i = 0; i < chars.length; i++) {
             char ch = chars[i];
