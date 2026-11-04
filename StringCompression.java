@@ -11,7 +11,10 @@ public class StringCompression {
 
     // new approach
     static int compress(char[] chars) {
-        
+        int i = 0;
+        while (i<chars.length) {
+            
+        }
     }
 
     // this approach not working because we need consecutive occurencies not just
