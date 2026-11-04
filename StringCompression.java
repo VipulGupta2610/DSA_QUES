@@ -9,6 +9,8 @@ public class StringCompression {
         System.out.println(ans);
     }
 
+// this approach not working because we need consecutive occurencies not just one occurance
+
     static int compress(char[] chars) {
         StringBuilder str = new StringBuilder();
         HashMap<Character,Integer> map = new HashMap<>();
@@ -20,7 +22,7 @@ public class StringCompression {
             }
         }
         for (int count : map.values()){
-            str.append(count)
+            str.append(count);
         }
     }
 
