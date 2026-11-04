@@ -14,7 +14,10 @@ public class StringCompression {
         int i = 0;
         StringBuilder str = new StringBuilder();
         while (i<chars.length) {
-            
+            char ch = chars[i];
+            while (condition) {
+                
+            }
         }
     }
 
