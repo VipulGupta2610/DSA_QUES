@@ -21,9 +21,13 @@ public class StringCompression {
                     str.append(2);
                 }else{
                     int cnt = str.charAt(str.length()-1);
-                    
+                    cnt++;
+                    str.substring(0, str.length());
+                    str.append(cnt);
                 }
+                j++;
             }
+            i++;
         }
     }
 
