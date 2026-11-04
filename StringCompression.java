@@ -12,6 +12,7 @@ public class StringCompression {
     // new approach
     static int compress(char[] chars) {
         int i = 0;
+        StringBuilder str = new StringBuilder();
         while (i<chars.length) {
             
         }
