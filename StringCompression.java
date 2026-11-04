@@ -8,25 +8,27 @@ public class StringCompression {
         int ans = compress(arr);
         System.out.println(ans);
     }
-// new approach
-    static int compress(char[]chars){
 
+    // new approach
+    static int compress(char[] chars) {
+        
     }
 
-// this approach not working because we need consecutive occurencies not just one occurance
+    // this approach not working because we need consecutive occurencies not just
+    // one occurance
     // static int compress(char[] chars) {
-    //     StringBuilder str = new StringBuilder();
-    //     HashMap<Character,Integer> map = new HashMap<>();
-    //     for (int i = 0; i < chars.length; i++) {
-    //         if (map.containsKey(chars[i])){
-    //              map.put(chars[i], map.getOrDefault(chars[i], 0) + 1);
-    //         }else{
-    //             map.put(chars[i], 1);
-    //         }
-    //     }
-    //     for (int count : map.values()){
-    //         str.append(count);
-    //     }
+    // StringBuilder str = new StringBuilder();
+    // HashMap<Character,Integer> map = new HashMap<>();
+    // for (int i = 0; i < chars.length; i++) {
+    // if (map.containsKey(chars[i])){
+    // map.put(chars[i], map.getOrDefault(chars[i], 0) + 1);
+    // }else{
+    // map.put(chars[i], 1);
+    // }
+    // }
+    // for (int count : map.values()){
+    // str.append(count);
+    // }
     // }
 
     // brute force
