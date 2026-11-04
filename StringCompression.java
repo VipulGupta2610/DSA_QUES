@@ -15,7 +15,8 @@ public class StringCompression {
         StringBuilder str = new StringBuilder();
         while (i<chars.length) {
             char ch = chars[i];
-            while (condition) {
+            int j = i;
+            while (chars[j]==ch) {
                 
             }
         }
