@@ -9,8 +9,9 @@ public class StringCompression {
         System.out.println(ans);
     }
 
-// this approach not working because we need consecutive occurencies not just one occurance
 
+    
+// this approach not working because we need consecutive occurencies not just one occurance
     static int compress(char[] chars) {
         StringBuilder str = new StringBuilder();
         HashMap<Character,Integer> map = new HashMap<>();
