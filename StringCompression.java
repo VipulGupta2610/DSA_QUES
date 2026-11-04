@@ -29,6 +29,7 @@ public class StringCompression {
             }
             i++;
         }
+        return str.length();
     }
 
     // this approach not working because we need consecutive occurencies not just
