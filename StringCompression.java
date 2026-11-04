@@ -17,7 +17,12 @@ public class StringCompression {
             char ch = chars[i];
             int j = i;
             while (chars[j]==ch) {
-                
+                if (str.charAt(str.length()-1)==chars[j]){
+                    str.append(2);
+                }else{
+                    int cnt = str.charAt(str.length()-1);
+                    
+                }
             }
         }
     }
