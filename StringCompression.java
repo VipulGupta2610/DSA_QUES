@@ -8,9 +8,9 @@ public class StringCompression {
         int ans = compress(arr);
         System.out.println(ans);
     }
-
+// new approach
     static int compress(char[]chars){
-        
+
     }
 
 // this approach not working because we need consecutive occurencies not just one occurance
