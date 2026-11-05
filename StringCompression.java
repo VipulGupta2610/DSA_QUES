@@ -1,4 +1,5 @@
 package pkg;
+
 import java.util.HashMap;
 
 public class StringCompression {
@@ -8,45 +9,46 @@ public class StringCompression {
         System.out.println(ans);
     }
 
-    static int compress(char []chars){
+    static int compress(char[] chars) {
         StringBuilder str = new StringBuilder();
         int i = 0;
-        while (i<chars.length) {
+        while (i < chars.length) {
             char ch = chars[i];
-            int count =0;
-            while (i<chars.length && ch==chars[i]) {
+            int count = 0;
+            while (i < chars.length && ch == chars[i]) {
                 count++;
                 i++;
             }
             str.append(ch);
-            if (count>1){
+            if (count > 1) {
                 str.append(count);
             }
         }
+        System.out.println(str);
         return str.length();
     }
 
     // new approach
     // static int compress(char[] chars) {
-    //     int i = 0;
-    //     StringBuilder str = new StringBuilder();
-    //     while (i < chars.length) {
-    //         char ch = chars[i];
-    //         int j = i;
-    //         while (chars[j] == ch) {
-    //             if (str.charAt(str.length() - 1) == chars[j]) {
-    //                 str.append(2);
-    //             } else {
-    //                 int cnt = str.charAt(str.length() - 1);
-    //                 cnt++;
-    //                 str.substring(0, str.length());
-    //                 str.append(cnt);
-    //             }
-    //             j++;
-    //         }
-    //         i++;
-    //     }
-    //     return str.length();
+    // int i = 0;
+    // StringBuilder str = new StringBuilder();
+    // while (i < chars.length) {
+    // char ch = chars[i];
+    // int j = i;
+    // while (chars[j] == ch) {
+    // if (str.charAt(str.length() - 1) == chars[j]) {
+    // str.append(2);
+    // } else {
+    // int cnt = str.charAt(str.length() - 1);
+    // cnt++;
+    // str.substring(0, str.length());
+    // str.append(cnt);
+    // }
+    // j++;
+    // }
+    // i++;
+    // }
+    // return str.length();
     // }
 
     // this approach not working because we need consecutive occurencies not just
