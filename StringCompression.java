@@ -10,7 +10,7 @@ public class StringCompression {
     }
 
     static int compress(char []chars){
-        
+        StringBuilder str = new StringBuilder();
     }
 
     // new approach
