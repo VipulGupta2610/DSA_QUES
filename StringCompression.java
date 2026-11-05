@@ -14,14 +14,17 @@ public class StringCompression {
         int i = 0;
         while (i<chars.length) {
             char ch = chars[i];
-            int j = i;
             int count =0;
-            while (ch==chars[j]) {
-                j++;
+            while (ch==chars[i] && i<chars.length) {
                 count++;
+                i++;
             }
-            i=j;
+            str.append(ch);
+            if (count>1){
+                str.append(count);
+            }
         }
+        return str.length();
     }
 
     // new approach
