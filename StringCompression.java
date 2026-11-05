@@ -12,6 +12,10 @@ public class StringCompression {
     static int compress(char []chars){
         StringBuilder str = new StringBuilder();
         int i = 0;
+        while (i<chars.length) {
+            char ch = chars[i];
+            
+        }
     }
 
     // new approach
