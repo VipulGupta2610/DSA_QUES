@@ -14,7 +14,7 @@ public class StringCompression {
         while (i<chars.length) {
             char ch = chars[i];
             int count =0;
-            while (ch==chars[i] && i<chars.length) {
+            while (i<chars.length && ch==chars[i]) {
                 count++;
                 i++;
             }
