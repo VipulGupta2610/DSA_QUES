@@ -10,27 +10,27 @@ public class StringCompression {
     }
 
     // new approach
-    static int compress(char[] chars) {
-        int i = 0;
-        StringBuilder str = new StringBuilder();
-        while (i<chars.length) {
-            char ch = chars[i];
-            int j = i;
-            while (chars[j]==ch) {
-                if (str.charAt(str.length()-1)==chars[j]){
-                    str.append(2);
-                }else{
-                    int cnt = str.charAt(str.length()-1);
-                    cnt++;
-                    str.substring(0, str.length());
-                    str.append(cnt);
-                }
-                j++;
-            }
-            i++;
-        }
-        return str.length();
-    }
+    // static int compress(char[] chars) {
+    //     int i = 0;
+    //     StringBuilder str = new StringBuilder();
+    //     while (i < chars.length) {
+    //         char ch = chars[i];
+    //         int j = i;
+    //         while (chars[j] == ch) {
+    //             if (str.charAt(str.length() - 1) == chars[j]) {
+    //                 str.append(2);
+    //             } else {
+    //                 int cnt = str.charAt(str.length() - 1);
+    //                 cnt++;
+    //                 str.substring(0, str.length());
+    //                 str.append(cnt);
+    //             }
+    //             j++;
+    //         }
+    //         i++;
+    //     }
+    //     return str.length();
+    // }
 
     // this approach not working because we need consecutive occurencies not just
     // one occurance
