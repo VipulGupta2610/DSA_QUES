@@ -9,6 +9,10 @@ public class StringCompression {
         System.out.println(ans);
     }
 
+    static int compress(char []chars){
+        
+    }
+
     // new approach
     // static int compress(char[] chars) {
     //     int i = 0;
