@@ -9,22 +9,25 @@ public class StringCompression {
         System.out.println(ans);
     }
 
-    static int compress(char[]chars){
+    static int compress(char[] chars) {
         int i = 0;
-        while (i<chars.length) {
+        int index = 0;
+        while (i < chars.length) {
             int count = 0;
             char ch = chars[i];
-            while (ch==chars[i]) {
+            while (i < chars.length && ch == chars[i]) {
                 count++;
                 i++;
             }
-            if (count==1){
-                chars[i]=ch;
-            }
-            else{
-                
+            chars[index++] = ch;
+            if (count > 1) {
+                String str = String.valueOf(count);
+                for (char chn : str.toCharArray()) {
+                    chars[index++] = chn;
+                }
             }
         }
+        return index;
     }
 
     // new approach
