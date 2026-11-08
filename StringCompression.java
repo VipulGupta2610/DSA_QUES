@@ -9,24 +9,6 @@ public class StringCompression {
         System.out.println(ans);
     }
 
-    static int compress(char[] chars) {
-        StringBuilder str = new StringBuilder();
-        int i = 0;
-        while (i < chars.length) {
-            char ch = chars[i];
-            int count = 0;
-            while (i < chars.length && ch == chars[i]) {
-                count++;
-                i++;
-            }
-            str.append(ch);
-            if (count > 1) {
-                str.append(count);
-            }
-        }
-        System.out.println(str);
-        return str.length();
-    }
 
     // new approach
     // static int compress(char[] chars) {
