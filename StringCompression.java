@@ -12,7 +12,18 @@ public class StringCompression {
     static int compress(char[]chars){
         int i = 0;
         while (i<chars.length) {
-            
+            int count = 0;
+            char ch = chars[i];
+            while (ch==chars[i]) {
+                count++;
+                i++;
+            }
+            if (count==1){
+                chars[i]=ch;
+            }
+            else{
+                
+            }
         }
     }
 
