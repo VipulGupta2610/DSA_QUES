@@ -10,7 +10,10 @@ public class StringCompression {
     }
 
     static int compress(char[]chars){
-        
+        int i = 0;
+        while (i<chars.length) {
+            
+        }
     }
 
     // new approach
