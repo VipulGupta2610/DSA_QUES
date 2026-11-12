@@ -12,10 +12,4 @@ public class combination_sum {
 
     }
 
-    static boolean helper(int num, int currentSum, int target) {
-        if (currentSum + num > target) {
-
-        }
-    }
-
 }
