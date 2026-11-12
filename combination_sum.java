@@ -11,7 +11,7 @@ public class combination_sum {
         
     }
 
-    static boolean helper (){
+    static boolean helper (int target){
         
     }
 
