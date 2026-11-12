@@ -12,4 +12,10 @@ public class combination_sum {
 
     }
 
-}
+    static void helper(int num ,int currentSum, int target, int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+
+        }
+    }
+
+}   
