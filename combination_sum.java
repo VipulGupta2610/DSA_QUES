@@ -15,7 +15,7 @@ public class combination_sum {
     static void comSum(int num, int currentSum, int target, int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             while (helper(num, currentSum, target)) {
-                currentSum+=num
+                currentSum+=num;
             }
         }
     }
