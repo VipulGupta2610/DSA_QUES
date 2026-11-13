@@ -1,5 +1,6 @@
 package pkg;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class combination_sum {
@@ -14,8 +15,10 @@ public class combination_sum {
 
     static void comSum(int num, int currentSum, int target, int[] arr) {
         for (int i = 0; i < arr.length; i++) {
+            List<Integer> list = new ArrayList<>();
             while (helper(num, currentSum, target)) {
                 currentSum+=num;
+                list.add(num);
             }
         }
     }
