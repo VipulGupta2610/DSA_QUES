@@ -12,10 +12,19 @@ public class combination_sum {
 
     }
 
-    static void helper(int num ,int currentSum, int target, int[] arr) {
+    static void comSum(int num, int currentSum, int target, int[] arr) {
         for (int i = 0; i < arr.length; i++) {
-
+            while (helper(num, currentSum, target)) {
+                currentSum+=num
+            }
         }
     }
 
-}   
+    static boolean helper(int num, int currentSum, int target) {
+        if (num + currentSum > target) {
+            return false;
+        }
+        return true;
+    }
+
+}
