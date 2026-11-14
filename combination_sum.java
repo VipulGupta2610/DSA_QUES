@@ -17,7 +17,10 @@ public class combination_sum {
         if (sum(list, num) > target) {
             return new ArrayList<>();
         }
-        
+        if (sum(list,num)==target){
+            list.add(num);
+            return list;
+        }
     }
 
     static int sum(List<Integer> list, int num) {
