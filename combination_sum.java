@@ -13,9 +13,11 @@ public class combination_sum {
 
     }
 
-    static List<Integer> helper (int [] arr , int target,int num ){
-        
+    static List<Integer> helper (int [] arr , int target,int num ,List<Integer>){
+        if (sum())
     }
+
+    static int 
 
     // static void comSum(int num, int currentSum, int target, int[] arr) {
     //     for (int i = 0; i < arr.length; i++) {
