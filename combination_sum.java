@@ -10,7 +10,7 @@ public class combination_sum {
 
     // recurssion will be used here
     static List<List<Integer>> combinationSum(int[] candidates, int target) {
-        
+
     }
 
     static List<Integer> helper(int[] arr, int target, int num, List<Integer> list) {
@@ -21,7 +21,10 @@ public class combination_sum {
             list.add(num);
             return list;
         }
-        
+        for (int i = 0; i < arr.length; i++) {
+            List<Integer> ansList = helper(arr, target, arr[i], list);
+            if ()
+        }
     }
 
     static int sum(List<Integer> list, int num) {
