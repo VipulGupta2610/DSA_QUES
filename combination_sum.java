@@ -21,9 +21,16 @@ public class combination_sum {
             list.add(num);
             return list;
         }
+        if (sum(list, num)<target){
+            list.add(num);
+            List<Integer> ansList = helper(arr, target, num, list);
+            list.remove(list.size()-1);
+        }
         for (int i = 0; i < arr.length; i++) {
             List<Integer> ansList = helper(arr, target, arr[i], list);
-            if ()
+            if (ansList.isEmpty()){
+
+            }
         }
     }
 
