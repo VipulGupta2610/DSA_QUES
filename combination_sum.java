@@ -23,7 +23,7 @@ public class combination_sum {
 
     static void helper(int[] arr, int target, int index, List<Integer> list, List<List<Integer>> ans) {
         if (target == 0) {
-            ans.add(list);
+            ans.add(new ArrayList<>(list));
             return;
         }
         if (target < 0 || index == arr.length) {
