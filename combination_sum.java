@@ -13,34 +13,47 @@ public class combination_sum {
 
     }
 
-    static List<Integer> helper(int[] arr, int target, int num, List<Integer> list) {
-        if (sum(list, num) > target) {
-            return new ArrayList<>();
-        }
-        if (sum(list,num)==target){
-            list.add(num);
-            return list;
-        }
-        if (sum(list, num)<target){
-            list.add(num);
-            List<Integer> ansList = helper(arr, target, num, list);
-            list.remove(list.size()-1);
-        }
-        for (int i = 0; i < arr.length; i++) {
-            List<Integer> ansList = helper(arr, target, arr[i], list);
-            if (ansList.isEmpty()){
-                
-            }
-        }
-    }
 
-    static int sum(List<Integer> list, int num) {
-        int ans = num;
-        for (int i = 0; i < list.size(); i++) {
-            ans += list.get(i);
-        }
-        return ans;
-    }
+
+
+
+
+
+
+
+
+
+
+
+    
+    // static List<Integer> helper(int[] arr, int target, int num, List<Integer> list) {
+    //     if (sum(list, num) > target) {
+    //         return new ArrayList<>();
+    //     }
+    //     if (sum(list,num)==target){
+    //         list.add(num);
+    //         return list;
+    //     }
+    //     if (sum(list, num)<target){
+    //         list.add(num);
+    //         List<Integer> ansList = helper(arr, target, num, list);
+    //         list.remove(list.size()-1);
+    //     }
+    //     for (int i = 0; i < arr.length; i++) {
+    //         List<Integer> ansList = helper(arr, target, arr[i], list);
+    //         if (ansList.isEmpty()){
+                
+    //         }
+    //     }
+    // }
+
+    // static int sum(List<Integer> list, int num) {
+    //     int ans = num;
+    //     for (int i = 0; i < list.size(); i++) {
+    //         ans += list.get(i);
+    //     }
+    //     return ans;
+    // }
 
     // static void comSum(int num, int currentSum, int target, int[] arr) {
     // for (int i = 0; i < arr.length; i++) {
