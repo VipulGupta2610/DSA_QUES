@@ -24,7 +24,7 @@ public class combination_sum_2 {
             ans.add(new ArrayList<>(list));
             return ;
         }
-        if (idx == arr.length){
+        if (target < 0 || idx == arr.length){
             return;
         }
         list.add(arr[idx]);
