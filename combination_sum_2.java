@@ -29,9 +29,18 @@ public class combination_sum_2 {
         if (target < 0 || idx == arr.length) {
             return;
         }
-        list.add(arr[idx]);
-        helper(arr, target - arr[idx], ans, list, idx + 1);
-        list.remove(list.size() - 1);
-        helper(arr, target, ans, list, idx + 1);
+        for (int i = idx; i < arr.length; i++) {
+
+            if (i > idx && arr[i] == arr[i - 1]) {
+                continue;
+            }
+
+            list.add(arr[i]);
+
+            helper(arr, target - arr[i], ans, list, i + 1);
+
+            // Backtracking
+            list.remove(list.size() - 1);
+        }
     }
 }
