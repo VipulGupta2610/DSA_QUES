@@ -20,7 +20,7 @@ public class Largest_reactangle_in_histogram {
             if (heights[left] < heights[right]) {
                 left++;
             } else {
-                right++;
+                right--;
             }
         }
         return ans;
